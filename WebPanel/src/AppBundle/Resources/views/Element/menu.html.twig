@@ -1,0 +1,80 @@
+<div class="sidebar" data-color="blue"  data-background-color="black" data-image="{{asset("img/sidebar-1.jpg")}}">
+  <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+  <div class="logo">
+      <a href="http://www.creative-tim.com" class="simple-text">
+          Creative Tim
+      </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <div class="user">
+            <div class="photo">
+                <img src="{{asset("img/avatar.jpg")}}">
+            </div>
+            <div class="info">
+                <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                    Admin
+                    <b class="caret"></b>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <ul class="nav" style="margin-top:0px">
+                        <li>
+                            <a href="{{path("fos_user_change_password")}}">Change Password</a>
+                        </li>
+                        <li>
+                            <a href="{{path("fos_user_security_logout")}}">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <ul class="nav">
+            <li {% if "home" in  app.request.attributes.get('_route') %} class="active"{% endif %}>
+                <a href="{{path("app_home_index")}}">
+                    <i class="material-icons">dashboard</i>
+                    <p>Tableau de bord </p>
+                </a>
+            </li>
+            <li  {% if "categorie" in  app.request.attributes.get('_route') %} class="active"{% endif %} >
+                <a href="{# path("app_categorie_index") #}">
+                    <i class="material-icons">view_list</i>
+                    <p>Catégories</p>
+                </a>
+            </li>
+            <li {% if "banner" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                <a href="{#path("app_banner_index")#}">
+                    <i class="material-icons">picture_in_picture</i>
+                    <p>Banners</p>
+                </a>
+            </li>
+
+            <li {% if "product" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                <a href="{#path("app_product_index")#}">
+                    <i class="material-icons">view_agenda</i>
+                    <p>Produits</p>
+                </a>
+            </li>
+            <li {% if "commande_" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                <a href="{#path("app_commande_index")#}">
+                    <i class="material-icons">shopping_cart</i>
+                    <p>Commandes</p>
+                </a>
+            </li>
+            <li {% if "coupon_" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                <a href="{#path("app_coupon_index")#}">
+                <i class="material-icons">card_giftcard</i>
+                    <p>Codes promotionnels</p>
+                </a>
+            </li>
+            <li {% if "user" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                <a href="{#path("app_user_index")#}">
+                <i class="material-icons">group</i>
+                    <p>Les utilisateurs</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

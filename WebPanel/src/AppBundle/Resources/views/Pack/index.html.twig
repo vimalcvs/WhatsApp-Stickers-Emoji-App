@@ -1,0 +1,98 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{path("app_pack_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">inbox</i> {{count}} packs</a>
+				</div>
+				<div class="col-md-4">
+					<a href="{{path("app_pack_add")}}" class="btn btn-rose btn-lg pull-right add-button col-md-12" title=""><i class="material-icons" style="font-size: 30px;">add_box</i> NEW PACK </a>
+				</div>
+			</div>
+			<div class="row">
+				<form method="get" accept-charset="utf-8">
+				<div class="col-md-10">
+						<input type="text" name="q" class="form-control" placeholder="Search here" style="height:53px">
+				</div>
+				<div class="col-md-2">
+					<button type="submit" class="btn  btn-md btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">search</i></button>
+				</div>
+				</form>
+			</div>
+			<div class="row">
+				{% for pack in packs %}
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-content">
+								<div class="pack-item">
+									<div class="pack-header">
+										<div class="pack-item-image"><img src="{{asset(pack.image.link)}}"></div>
+										<div class="pack-item-title"><p>{{pack.name}} - {{pack.sizes}}</p></div>
+										<div class="pack-body">
+											{% set index = 0 %}
+											{% for sticker in pack.stickers %}
+												{% if index < 10 %}
+													<div class="pack-item-sticker"><img src="{{asset(sticker.media.link)}}"></div>
+												{% endif %}
+												{% set index = index + 1 %}
+											{% endfor %}
+										</div>
+									</div>
+					
+								</div>
+								
+								<img src="" style="width:100%; height:auto;    border-radius: 5px;" >
+								<br>
+							</div>
+							<div class="card-footer" style="    text-align: left;">
+								<a href="{{path("app_pack_edit",{"id":pack.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit">
+									<i class="material-icons">edit</i>
+								</a>
+								<a href="{{path("app_pack_stickers",{"id":pack.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit Stickers">
+									<i class="material-icons">list</i>
+								</a>
+								<a href="{{path("app_pack_view",{"id":pack.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-primary btn-xs btn-round" data-original-title="View">
+									<i class="material-icons">remove_red_eye</i>
+								</a>
+								<a href="{{path("app_home_notif_pack",{"id":pack.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-danger btn-xs btn-round" data-original-title="Send Notification">
+									<i class="material-icons">notifications</i>
+								</a>
+								<a href="{{path("app_pack_delete",{"id":pack.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+									<i class="material-icons">delete</i>
+								</a>
+								<div class="price">
+									<div class="wallpaper-logo" >
+										{% if pack.user.image == "" %}
+											{{pack.user.name}}
+										{% else %}
+											<img src="{{pack.user.image}}" class="avatar-img" alt="">
+										{% endif %}
+										<span>{{pack.user.name}}<br>{{pack.created|ago}}</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				{% else %}
+					<div class="col-md-12">
+						<div class="card"  style="text-align: center;" >
+							<br>
+							<br>
+							<img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" ="">
+							<br>
+							<br>
+						</div>
+					</div>
+				{% endfor %}
+				
+			</div>
+			<div class=" pull-right">
+				{{ knp_pagination_render(packs) }}
+			</div>
+		</div>
+	{% endblock%}

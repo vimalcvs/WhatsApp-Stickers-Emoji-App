@@ -1,0 +1,138 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+    <div class="container">
+        <div class="container">
+            <div class="c-header">
+                <h2>{{user.name}}<small>( {{user.username}} )</small></h2>
+            </div>
+            <div class="card" id="profile-main">
+                <div class="pm-overview c-overflow mCustomScrollbar _mCS_4 mCS-autoHide" style="overflow: visible;"><div id="mCSB_4" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical_horizontal mCSB_outside" tabindex="0"><div id="mCSB_4_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x" style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr">
+                    <div class="pmo-pic">
+                        <div class="p-relative">
+                            <a href="">
+                            {% if user.media==null %}
+                                  <div class=" palette-Red-400 bg img-responsive mCS_img_loaded" style="min-height: 200px;color: white;text-align: center;height: auto;line-height: 200px;font-size: 71pt;text-transform: uppercase;">{{user.name|first|lower}}</div>
+                            {% else %}
+                                <img class="img-responsive mCS_img_loaded" src="{{asset(user.media.link)|imagine_filter("profile_picture")}}" alt="">
+                            {% endif %}
+
+                            </a>
+                            <div class="dropdown pmop-message">
+                                <span  class="btn palette-White bg btn-float  ">
+                                    {% if user.type=="google" %}
+                                    <i class="zmdi zmdi-google-glass" style="line-height: 40px;"></i>
+                                    {% elseif user.type=="facebook" %}
+                                    <i class="zmdi zmdi-facebook-box" style="line-height: 40px;"></i>
+                                    {% else %}
+                                    <i class="zmdi zmdi-email" style="line-height: 40px;"></i>
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pmo-stat">
+                            <h2 class="m-0 c-white">{{user.comments|length}}</h2>
+                            Total Comments
+                        </div>
+                    </div>
+                    <div class="pmo-block pmo-contact hidden-xs">
+                        <h2></h2>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="mCSB_4_scrollbar_horizontal" class="mCSB_scrollTools mCSB_4_scrollbar mCS-minimal-dark mCSB_scrollTools_horizontal" style="display: none;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_4_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 50px; width: 0px; left: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar"></div>
+                </div>
+                <div class="mCSB_draggerRail"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pm-body clearfix">
+        <ul class="tab-nav tn-justified">
+            <li class="waves-effect"><a href="{{path('user_user_edit',{"id":user.id})}}">Infos</a></li>
+            <li class="active waves-effect"><a href="{{path('user_user_comment',{"id":user.id})}}">Comments</a></li>
+        </ul>
+        <div class="">
+		<div class="list-group lg-alt lg-even-black">
+		        {% set k= 0 %}
+		        {% for comment in pagination %}
+		            <div class="list-group-item media">
+		                <div class="pull-left">
+		                    {% if comment.user.media == null %}
+		                        {% if k==0 %}
+		                            <div class="avatar-char palette-Light-Blue bg">{{comment.user.name|first|lower}}</div>
+		                        {% elseif k==1 %}
+		                            <div class="avatar-char palette-Purple-300 bg">{{comment.user.name|first|lower}}</div>
+		                        {% elseif k==2 %}
+		                            <div class="avatar-char palette-Green-400 bg">{{comment.user.name|first|lower}}</div>
+		                        {% elseif k==3 %}
+		                            <div class="avatar-char palette-Red-400 bg">{{comment.user.name|first|lower}}</div>
+		                        {% endif %}
+		                    {% else %}
+		                        <img class="avatar-char palette-Red-400 bg" src="{{asset(comment.user.media.link)|imagine_filter("profile_picture")}}" alt="">
+		                    {% endif %}
+		                </div>
+		                <div class="pull-right">
+		                    <ul class="actions">
+		                        <li class="dropdown">
+		                            <a href="" data-toggle="dropdown" aria-expanded="false">
+		                                <i class="zmdi zmdi-more-vert"></i>
+		                            </a>
+		                            <ul class="dropdown-menu dropdown-menu-right">
+		                                <li>
+		                                    <a href="{{path("app_comments_delete",{"id":comment.id,"from":"user"})}}">Delete</a>
+		                                </li>
+		                                <li>
+		                                    <a href="{{path("app_comments_hide",{"id":comment.id,"from":"user"})}}">
+		                                        {% if comment.enabled == true %}
+		                                            Hide
+		                                        {% else %}
+		                                            Show
+		                                        {% endif %}
+		                                    </a>
+		                                </li>
+		                            </ul>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="media-body">
+		                    <div class="lgi-heading">
+		                        <a href="{{path("app_guides_view",{"id":comment.guide.id})}}" title="">{{comment.guide.title}}</a>
+		                    </div>
+		                    <small class="lgi-text">{{comment.content}}</small>
+		                    <ul class="lgi-attrs">
+		                        <li>Date Created:{{comment.created|date("d/m/Y")}} at {{comment.created|date("H:i")}}</li>
+		                        <li>
+		                            Published:
+		                            {% if comment.enabled == true %}
+		                                Yes
+		                            {% else %}
+		                                No
+		                            {% endif %}
+		                            
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		            {% if k==3 %}
+		                {% set k=0 %}
+		            {% else %}
+		                {% set k=k+1 %}
+		            {% endif %}
+		        {% else %}
+		            <p style="text-align:center">
+		                <img style="padding:50px; width:100%" src="{{asset("img/bg_empty.png")}}" alt="">
+		            </p>
+		        {% endfor %}
+		        <div class=" pull-right">
+		            {{ knp_pagination_render(pagination) }}
+		        </div>
+	        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock%}

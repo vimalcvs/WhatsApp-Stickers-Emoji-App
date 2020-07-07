@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:background="@drawable/bg_dialog"
+        android:id="@+id/linear_layout_rate"
+        android:visibility="visible"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:lines="2"
+            android:minLines="2"
+            android:text="how was your experience with us ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:layout_gravity="center"
+            android:id="@+id/AppCompatRatingBar_dialog_rating_app"
+            android:indeterminateTint="#e49a05"
+            android:foregroundTint="#e49a05"
+            android:progressTint="#e49a05"
+            android:backgroundTint="@color/dark_gray"
+            android:secondaryProgressTint="@color/gray_color"
+            android:progressBackgroundTint="@color/gray_color"
+            android:rating="0"
+            android:stepSize="1"
+            android:elevation="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/relative_layout_user"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_never"
+                android:textStyle="bold"
+                android:text="NEVER"
+                android:textColor="@color/primary_text_light"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/button_later"
+                android:textStyle="bold"
+                android:text="@string/later"
+                android:textColor="@color/blue"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/bg_dialog"
+        android:id="@+id/linear_layout_feedback"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:lines="1"
+            android:gravity="center|left"
+            android:text="Feedback"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <EditText
+            android:id="@+id/edit_text_feed_back"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:padding="10dp"
+            android:gravity="top|left"
+            android:hint="Write feedback ..."
+            android:textColor="@color/primary_text"
+            android:background="@drawable/edit_text_bg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_cancel"
+                android:textStyle="bold"
+                android:text="Cancel"
+                android:textColor="@color/primary_text_light"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/buttun_send_feedback"
+                android:textStyle="bold"
+                android:text="Submit"
+                android:textColor="@color/blue"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

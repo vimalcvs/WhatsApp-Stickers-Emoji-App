@@ -1,0 +1,42 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-sm-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">flag</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Edit :  {{form.vars.value.language}}</h4>
+                    {{form_start(form)}}
+                    <form method="#" action="#">
+                        <div class="form-group label-floating">
+                            <label class="control-label">Language title</label>
+                            {{form_widget(form.language,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.language)}}</span>
+                        </div>
+                        <div class="">
+                            <label>
+                              {{form_widget(form.enabled)}}  Enabled
+                            </label>
+                        </div>
+                        <div class="fileinput fileinput-new text-center" style="    width: 100%;" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" >
+                                <img  id="img-preview" src="{{asset(form.vars.value.media.link)|imagine_filter('language_thumb')}}">
+                            </div>
+                           {{form_widget(form.file,{"attr":{"class":"file-hidden input-file img-selector","style":"    display: none;"}})}}
+                            <div class="fileinput-preview thumbnail"></div>
+                            <div>
+                                <a href="#" class="btn btn-rose btn-round btn-select"><i class="material-icons">image</i> Select image </a>
+                            </div>
+                            <span class="validate-input">{{form_errors(form.file)}}</span>
+                       </div>
+                        <span class="pull-right"><a href="{{path("app_language_index")}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

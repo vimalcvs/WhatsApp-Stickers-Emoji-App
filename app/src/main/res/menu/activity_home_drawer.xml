@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_latest"
+            android:icon="@drawable/ic_home"
+            android:title="@string/title_home" />
+        <item
+            android:id="@+id/my_profile"
+            android:icon="@drawable/ic_account"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/login"
+            android:icon="@drawable/ic_login_black"
+            android:title="@string/login" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/Logout" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/action_settings" />
+        <item
+            android:id="@+id/nav_go_pro"
+            android:icon="@drawable/ic_subscribe"
+            android:title="Subscribe" />
+
+    </group>
+
+    <item android:title="Application">
+        <menu>
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_like"
+                android:title="@string/action_rate" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share_this_app" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_live_help"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/nav_policy"
+                android:icon="@drawable/ic_lock"
+                android:title="@string/policy_privacy" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit_to_app"
+                android:title="@string/exit" />
+
+        </menu>
+    </item>
+
+</menu>

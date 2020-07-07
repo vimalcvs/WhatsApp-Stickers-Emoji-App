@@ -1,0 +1,33 @@
+parameters:
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+framework:
+    #esi:             ~
+    #translator:      { fallback: "%locale%" }
+    test: ~
+    templating:      { engines: ['php'] }
+    session:
+        storage_id: session.storage.mock_file
+    secret:          "%secret%"
+    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    default_locale:  "%locale%"
+
+liip_imagine:
+    loaders:
+        default:
+            filesystem:
+                data_root: "%kernel.root_dir%/web"
+    resolvers:
+        default:
+            web_path:
+                web_root: "%kernel.root_dir%/web"
+                cache_prefix: media/cache
+
+    filter_sets:
+        thumbnail_web_path:
+            filters:
+                thumbnail: { size: [223, 223], mode: inset }
+        thumbnail_default:
+            filters:
+                thumbnail: { size: [223, 223], mode: inset }

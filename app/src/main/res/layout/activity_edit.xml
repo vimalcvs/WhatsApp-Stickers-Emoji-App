@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout_user"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/comment_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_margin="16dp"
+                android:background="@drawable/edit_text_bg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"/>
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp">
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/image_view_edit_activity_user_profile"
+                        android:padding="8dp"
+                        android:src="@drawable/profile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp" />
+                    <RelativeLayout
+                        android:background="@drawable/bg_fab_accent"
+                        android:elevation="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp">
+                        <ImageView
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:padding="7dp"
+                            app:srcCompat="@drawable/ic_add_a_photo"
+                            android:id="@+id/image_view_edit_activity_name_edit_photo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:tint="@color/white"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/text_view_name_user"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:shadowColor="@color/black"
+                    android:textSize="10pt"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:textColor="@color/primary_text"
+                    android:text="Rahul kumar"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_follow"
+                    android:layout_marginTop="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/primary_text"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="6pt"
+                        android:id="@+id/text_view_follow"
+                        android:text="Follow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/imageView">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edit_input_layout_name"
+                    android:layout_width="match_parent"
+                    android:theme="@style/textview_login"
+
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:id="@+id/edit_input_name"
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:hint="@string/hint_name" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edit_input_layout_email"
+                    android:theme="@style/textview_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:id="@+id/edit_input_email"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_email" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edit_input_layout_facebook"
+                    android:theme="@style/textview_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:id="@+id/edit_input_facebook"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_facebook" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edit_input_layout_twitter"
+                    android:theme="@style/textview_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:id="@+id/edit_input_twitter"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_twitter" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/edit_input_layout_instragram"
+                    android:theme="@style/textview_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:padding="10dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:id="@+id/edit_input_instragram"
+                        android:layout_width="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_instragram" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_btn_black"
+                    android:text="@string/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_button"
+                    android:layout_weight="1"
+                    android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:elevation="1dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+</RelativeLayout>

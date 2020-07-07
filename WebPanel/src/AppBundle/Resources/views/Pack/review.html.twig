@@ -1,0 +1,130 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-offset-1 col-md-10">
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="rose">
+            <i class="material-icons">inbox</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">Edit Pack</h4>
+            {{form_start(form)}}
+            <br>
+            <br>
+            <div>
+              <div class="pack-image">
+                <div class="path-image-img"><img src="{{asset(form.vars.value.image.link)}}" class="thumbnail" id="img-preview"></div>
+                <button class="btn-select">select pack image</button>
+                <div class="form-group label-floating is-input-file">
+                  {{form_widget(form.file,{"attr":{"class":"form-control"}})}}
+                </div>
+              </div>
+              <div class="form-right">
+                <div class="form-group label-floating ">
+                  <label class="control-label">Pack name</label>
+                  {{form_widget(form.name,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.name)}}</span>
+                </div>
+                <div class="form-group label-floating ">
+                  <label class="control-label">Pack publisher</label>
+                  {{form_widget(form.publisher,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.publisher)}}</span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="form-group label-floating ">
+              <label class="control-label">Publisher E-mail</label>
+              {{form_widget(form.publisheremail,{"attr":{"class":"form-control"}})}}
+              <span class="validate-input">{{form_errors(form.publisheremail)}}</span>
+            </div>
+            <div class="form-group label-floating ">
+              <label class="control-label">Publisher Website</label>
+              {{form_widget(form.publisherwebsite,{"attr":{"class":"form-control"}})}}
+              <span class="validate-input">{{form_errors(form.publisherwebsite)}}</span>
+            </div>
+            <div class="form-group label-floating ">
+              <label class="control-label">Website privacy policy</label>
+              {{form_widget(form.privacypolicywebsite,{"attr":{"class":"form-control"}})}}
+              <span class="validate-input">{{form_errors(form.privacypolicywebsite)}}</span>
+            </div>
+            <div class="form-group label-floating ">
+              <label class="control-label">Website license agreement</label>
+              {{form_widget(form.licenseagreementwebsite,{"attr":{"class":"form-control"}})}}
+              <span class="validate-input">{{form_errors(form.licenseagreementwebsite)}}</span>
+            </div>
+            <br>
+            <div class="">
+              <label>
+                {{form_widget(form.premium)}}  Premium Pack
+              </label>
+            </div>
+            <br>
+            {{form_label(form.categories,null,{label_attr:{"style":"font-size:16px"}})}} :
+            <div>
+              <div class="row">
+                {% for field in form.categories %}
+                  <label  style="background: black;border-radius: 3px;padding: 5px;text-align: center;margin: 10px;color: white;font-weight: bold;padding-left: 20px;padding-right: 20px;">
+                    {{ form_widget(field) }} {{ field.vars.label }}
+                  </label>
+                {% endfor %}
+              </div>
+            </div>
+            <br>
+            <div class="form-group label-floating ">
+              <label class="control-label">Pack tags (Ex:anim,art,hero)</label>
+              <br>
+              {{form_widget(form.tags,{"attr":{"class":"input-tags"}})}}
+              <span class="validate-input">{{form_errors(form.tags)}}</span>
+            </div>
+            <script>
+            $('.input-tags').selectize({
+            persist: false,
+            createOnBlur: true,
+            create: true
+            });
+            </script>
+            <br>
+            <span class="validate-input">{{form_errors(form.file)}}</span>
+            <span class="pull-right"><a href="{{path("app_pack_index")}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+            {{form_end(form)}}
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+          <a href="{{path("app_sticker_add",{"id":app.request.get("id")})}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">add</i> NEW STICKER</a>
+        </div>
+      </div>
+      <div class="row">
+        {% for sticker in pack.stickers %}
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-content" >
+                <h3></h3>
+                <img src="{{asset(sticker.media.link)}}" style="width:100%; height:auto;    border-radius: 5px;border:1px solid #ccc;padding:10px" >
+                <br>
+              </div>
+              <div class="card-footer" style="    text-align: center;margin:0px">
+                <a href="{{path("app_sticker_edit",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a href="{{path("app_sticker_delete",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+                  <i class="material-icons">delete</i>
+                </a>
+                <a href="{{path("app_sticker_up",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-info btn-xs btn-round" data-original-title="Up">
+                  <i class="material-icons">keyboard_arrow_up</i>
+                </a>
+                <a href="{{path("app_sticker_down",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-info btn-xs btn-round" data-original-title="Down">
+                  <i class="material-icons">keyboard_arrow_down</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+{% endblock%}

@@ -1,0 +1,105 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-offset-1 col-md-10">
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="rose">
+            <i class="material-icons">inbox</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">New Pack</h4>
+            {{form_start(form)}}
+               <div class="form-group label-floating ">
+                  <label class="control-label">Pack name</label>
+                  {{form_widget(form.name,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.name)}}</span>
+              </div>
+               <div class="form-group label-floating ">
+                  <label class="control-label">Pack publisher</label>
+                  {{form_widget(form.publisher,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.publisher)}}</span>
+              </div>
+               <div class="form-group label-floating ">
+                  <label class="control-label">Publisher E-mail</label>
+                  {{form_widget(form.publisheremail,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.publisheremail)}}</span>
+              </div>
+               <div class="form-group label-floating ">
+                  <label class="control-label">Publisher Website</label>
+                  {{form_widget(form.publisherwebsite,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.publisherwebsite)}}</span>
+              </div>
+               <div class="form-group label-floating ">
+                  <label class="control-label">Website privacy policy</label>
+                  {{form_widget(form.privacypolicywebsite,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.privacypolicywebsite)}}</span>
+              </div>
+               <div class="form-group label-floating ">
+                  <label class="control-label">Website license agreement</label>
+                  {{form_widget(form.licenseagreementwebsite,{"attr":{"class":"form-control"}})}}
+                  <span class="validate-input">{{form_errors(form.licenseagreementwebsite)}}</span>
+              </div>
+              <br>
+              <div class="">
+                    <label>
+                      {{form_widget(form.enabled)}}  Enabled
+                    </label>
+              </div>
+              <div class="">
+                    <label>
+                      {{form_widget(form.premium)}}  Premium Pack
+                    </label>
+              </div>
+              <br>
+              {{form_label(form.categories,null,{label_attr:{"style":"font-size:16px"}})}} :
+              <div>
+                  <div class="row">
+                 {% for field in form.categories %}
+                      <label  style="background: black;border-radius: 3px;padding: 5px;text-align: center;margin: 10px;color: white;font-weight: bold;padding-left: 20px;padding-right: 20px;">
+                          {{ form_widget(field) }} {{ field.vars.label }}
+                      </label>
+                  {% endfor %}
+                  </div>
+              </div>
+              <br>
+              <div class="form-group label-floating ">
+                  <label class="control-label">Pack tags (Ex:anim,art,hero)</label>
+                  <br>
+                  {{form_widget(form.tags,{"attr":{"class":"input-tags"}})}}
+                  <span class="validate-input">{{form_errors(form.tags)}}</span>
+              </div>
+              <script>
+              $('.input-tags').selectize({
+                persist: false,
+                createOnBlur: true,
+                create: true
+              });
+              </script>
+              <br>
+              <div class="pack-files">
+                <div class="pack-image">
+                  <div class="path-image-img"><img src="{{asset("img/image_placeholder.jpg")}}" class="thumbnail" id="img-preview"></div>
+                  <button class="btn-select">select pack image</button>
+                  <div class="form-group label-floating is-input-file">
+                      {{form_widget(form.file,{"attr":{"class":"form-control"}})}}
+                  </div>
+                </div>
+                <div class="pack-stickers">
+                  <div class="pack-stickers-files"></div>
+                  <button class="btn-select-stickers">select stickers files (PNG/WEBP files)</button>
+                  <div class="form-group label-floating is-input-file">
+                      {{form_widget(form.files,{"attr":{"class":"form-control"}})}}
+                  </div>
+                </div>
+              </div>
+              <span class="validate-input">{{form_errors(form.files)}}</span>
+              <span class="validate-input">{{form_errors(form.file)}}</span>
+              <span class="pull-right"><a href="{{path("app_pack_index")}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+            {{form_end(form)}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock%}

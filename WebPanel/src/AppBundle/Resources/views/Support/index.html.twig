@@ -1,0 +1,70 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="{{path("app_support_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+				</div>
+				<div class="col-md-6">
+					<a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">flag</i> {{supports|length}} Messages</a>
+				</div>
+			</div>
+			<div class="card">
+			    <div class="card-content">
+			        <h4 class="card-title">Messages list</h4>
+			        <div class="table-responsive">
+			            <table class="table" width="100%">
+			                <thead class="text-primary">
+			                	<tr>
+			                    <th>id</th>
+			                    <th>E-mail</th>
+			                    <th>Subject</th>
+			                    <th>Date</th>
+			                    <th width="160px">Action</th>
+			                	</tr>
+			                </thead>
+			                <tbody>
+			                {% for support in pagination %}
+			                    <tr>
+			                        <td>{{support.id}}</td>
+			                        <td>{{support.email}}</td>
+			                        <td>{{support.subject}}</td>
+			                        <td>{{support.created|date("Y/m/d - H:i")}}</td>
+			                        <td>
+		                                <a href="{{path("app_support_view",{"id":support.id})}}" rel="tooltip" data-placement="left" class=" btn btn-primary btn-xs btn-round" data-original-title="View">
+		                                    <i class="material-icons">pageview</i>
+		                                </a>
+		                                <a href="{{path("app_support_delete",{"id":support.id})}}" rel="tooltip" data-placement="left" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+		                                    <i class="material-icons">delete</i>
+		                                </a>
+			                        </td>
+			                    </tr>
+			                    {% else %}
+						          <tr>
+							          <td colspan="4">
+								          <br>
+								          <br>
+								          <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+							              <br>
+							              <br>
+							          </td>
+						          </tr>	
+								{% endfor %}
+			                </tbody>
+			            </table>
+
+			        </div>
+	    		</div>
+			<div class=" pull-right">
+				{{ knp_pagination_render(pagination) }}
+			</div>
+	    	</div>
+	    </div>
+	</div>
+                            
+{% endblock%}
+
+

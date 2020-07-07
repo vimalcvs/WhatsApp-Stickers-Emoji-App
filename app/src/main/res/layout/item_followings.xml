@@ -1,0 +1,13 @@
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_width="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/recycle_view_follow_items"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+</RelativeLayout>

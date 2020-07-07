@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout_slide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.SlideActivity">
+    <com.vimalcvs.stickers_app.ui.views.ClickableViewPager
+        android:gravity="center"
+        android:paddingBottom="0dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:id="@+id/view_pager_slide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.vimalcvs.stickers_app.ui.views.ClickableViewPager>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+        <RelativeLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.github.vivchar.viewpagerindicator.ViewPagerIndicator
+                android:id = "@+id/view_pager_indicator"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                app:delimiterSize = "6dp"
+                app:itemSize="8dp"
+                android:background="@drawable/background_btn_black"
+                />
+            <LinearLayout
+                android:id="@+id/linear_layout_skip"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" >
+                <TextView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:text="SKIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_layout_next"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" >
+                <TextView
+                    android:id="@+id/text_view_next_done"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:text="NEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

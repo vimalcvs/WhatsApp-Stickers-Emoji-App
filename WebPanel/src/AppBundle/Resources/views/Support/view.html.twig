@@ -1,0 +1,49 @@
+
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-offset-1  col-md-4">
+            <a href="{{path("app_support_index")}}" class="btn btn-default btn-lg add-button" title=""><i class="material-icons">arrow_back</i> Messages </a>
+        </div>
+        <div class="col-md-5">
+            <a href="mailto:{{support.email}}?subject=feedback"  class="btn btn-primary btn-lg add-button pull-right" title=""><i class="material-icons">reply</i> Reply </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-md-9">
+            <div class="card card-product" >
+                <center><h2>{{support.subject}}</h2></center>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1  col-md-9">
+        
+        <div class="card" >
+            <div class="card-header ch-dark palette-Teal-600 bg"  style="background:white !important">
+                <h2><small>Full name : {{support.subject}} <br>
+                E-mail : {{support.email}}</small>
+                </h2>
+            </div>
+
+            <div class="card-header ch-dark palette-Teal-600 bg" style="background:white !important">
+              
+                    <div >Message</div>
+                    <div style="padding:40px; text-align: justify;padding:40px;">
+                        {{ support.message | raw }}
+                        <br>
+                        <br>
+                        <br>
+                        <ul class="lgi-attrs pull-right">
+                            Sending Date:{{support.created|date("d/m/Y")}} at {{support.created|date("H:i")}}
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

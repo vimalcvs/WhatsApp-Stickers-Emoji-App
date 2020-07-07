@@ -1,0 +1,73 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{path("app_version_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">flag</i> {{versions|length}} versions</a>
+				</div>
+				<div class="col-md-4">
+					<a href="{{path("app_version_add")}}" class="btn btn-rose btn-lg pull-right add-button col-md-12" title=""><i class="material-icons" style="font-size: 30px;">add_box</i> NEW VERSION </a>
+				</div>
+			</div>
+			<div class="card">
+			    <div class="card-content">
+			        <div class="table-responsive">
+			            <table class="table" width="100%">
+			                <thead class="text-primary">
+			                    <th>ID</th>
+			                    <th>Version title</th>
+			                    <th>Version code</th>
+			                    <th>Status</th>
+			                    <th width="300px">Action</th>
+			                </tr></thead>
+			                <tbody>
+			                {% for version in versions %}
+			                    <tr>
+			                        <td>{{version.id}}</td>
+			                        <td>{{version.title}}</td>
+			                        <td><span  > {{version.code}} </span></td>
+			                        <td>
+			                        {% if version.enabled %}
+			                            <span class="label label-success">Enabled</span>
+
+			                        {% else %}
+			                            <span class="label label-danger">Disabled</span>
+
+			                        {% endif %}
+			                        </td>
+			                        <td>
+		                                <a href="{{path("app_version_edit",{"id":version.id})}}" rel="tooltip" data-placement="left" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit">
+		                                    <i class="material-icons">edit</i>
+		                                </a>
+		                                <a href="{{path("app_version_delete",{"id":version.id})}}" rel="tooltip" data-placement="left" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+		                                    <i class="material-icons">delete</i>
+		                                </a>
+			                        </td>
+			                    </tr>
+			                    {% else %}
+						          <tr>
+							          <td colspan="5">
+								          <br>
+								          <br>
+								          <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+							              <br>
+							              <br>
+							          </td>
+						          </tr>	
+								{% endfor %}
+			                </tbody>
+			            </table>
+
+			        </div>
+	    		</div>
+
+	    	</div>
+	    </div>
+	</div>
+                            
+{% endblock%}

@@ -1,0 +1,75 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-12">
+
+			<div class="row">
+				<div class="col-md-4">
+					<div style="padding-left: 0px;">
+						<div class="card card-stats">
+							<div class="card-header" data-background-color="rose">
+								<i class="material-icons">messages</i>
+							</div>
+							<div class="card-content">
+								<p class="category">report messages</p>
+								<h3 class="card-title">{{reports|length}}</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+       		</div>
+			<div class="card">
+			    <div class="card-content">
+			        <div class="table-responsive">
+			            <table class="table" width="100%">
+			                <thead class="text-primary">
+			                	<tr>
+			                    <th>#</th>
+			                    <th>Message</th>
+			                    <th>Date</th>
+			                    <th width="160px">Action</th>
+			                	</tr>
+			                </thead>
+			                <tbody>
+			                {% for report in pagination %}
+			                    <tr>
+			                        <td><img src="{{asset(report.wallpaper.media.link)|imagine_filter('section_thumb')}}" style="width:70px; height:70px;    border-radius: 5px;" ></td>
+			                        <td>{{report.message}}</td>
+			                        <td>{{report.created|ago()}}</td>
+			                        <td>
+		                                <a href="{{path("app_wallpaper_delete",{"id":report.wallpaper.id})}}" rel="tooltip" data-placement="left" class=" btn btn-primary btn-xs btn-round" data-original-title="Delete wallpaper">
+		                                    <i class="material-icons">delete</i>
+		                                </a>
+		                                <a href="{{path("app_report_delete",{"id":report.id})}}" rel="tooltip" data-placement="left" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete report">
+		                                    <i class="material-icons">delete</i>
+		                                </a>
+			                        </td>
+			                    </tr>
+			                    {% else %}
+						          <tr>
+							          <td colspan="4">
+								          <br>
+								          <br>
+								          <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+							              <br>
+							              <br>
+							          </td>
+						          </tr>	
+								{% endfor %}
+			                </tbody>
+			            </table>
+
+			        </div>
+	    		</div>
+			<div class=" pull-right">
+				{{ knp_pagination_render(pagination) }}
+			</div>
+	    	</div>
+	    </div>
+	</div>
+                            
+{% endblock%}
+
+

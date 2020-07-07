@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragmenet.HomeFragment">
+    <RelativeLayout
+        android:id="@+id/relative_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout_list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linear_layout_layout_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/error_layout" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="visible"
+                    android:id="@+id/recycler_view_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    tools:listitem="@layout/item_pack"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:padding="100dp"
+                    app:srcCompat="@drawable/bg_empty"
+                    android:id="@+id/image_view_empty_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <RelativeLayout
+            android:elevation="3dp"
+            android:visibility="gone"
+            android:id="@+id/relative_layout_load_more"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_load_more"
+            android:layout_marginBottom="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

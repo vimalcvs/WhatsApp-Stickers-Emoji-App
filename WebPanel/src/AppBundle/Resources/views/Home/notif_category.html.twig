@@ -1,0 +1,47 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-sm-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">notifications_active</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Notification category</h4>
+                    {{form_start(form)}}
+
+                        <label class="control-label">Notification Title</label>
+                        <div class="form-group label-floating">
+                            {{form_widget(form.title,{"attr":{"class":"form-control","data-emojiable":"true","data-emoji-input":"unicode"}})}}
+                            <span class="validate-input">{{form_errors(form.title)}}</span>
+                        </div>
+                        <label class="control-label">Notification Message</label>
+                        <div class="form-group label-floating is-empty">
+                            {{form_widget(form.message,{"attr":{"class":"form-control","data-emojiable":"true","data-emoji-input":"unicode"}})}}
+                            <span class="validate-input">{{form_errors(form.message)}}</span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Large Icon</label>
+                            {{form_widget(form.icon,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.icon)}}</span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Big Image</label>
+                            {{form_widget(form.image,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.image)}}</span>
+                        </div>
+                        <div class="form-group label-floating ">
+                            <label class="control-label">Category</label>
+                            {{form_widget(form.category,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.category)}}</span>
+                        </div>
+                        <span class="pull-right">{{form_widget(form.send,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

@@ -1,0 +1,177 @@
+{
+  "project_info": {
+    "project_number": "690266354741",
+    "firebase_url": "https://my-project-bd321.firebaseio.com",
+    "project_id": "my-project-bd321",
+    "storage_bucket": "my-project-bd321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690266354741:android:3b8e36dca68a4951",
+        "android_client_info": {
+          "package_name": "com.mystatus.video_whatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690266354741-fvmld199k92icr1okt0rsti7em3t5fdp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mystatus.video_whatsapp",
+            "certificate_hash": "89a2455c9c6c187ca935f06e83415e514bffebd8"
+          }
+        },
+        {
+          "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqK2dXmV-Ib6K0ofTbhCa0SC8-WQRA4vs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690266354741:android:e7140ddbb1cd8675",
+        "android_client_info": {
+          "package_name": "com.vimalcvs.ringtone_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690266354741-2utio6a1p8ln1cojh8nh9iuqns9vesqh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vimalcvs.ringtone_app",
+            "certificate_hash": "0f07403727f1c7e897ddf43fbbedecb06b59acd6"
+          }
+        },
+        {
+          "client_id": "690266354741-lpcs70icfaat2pdgu4dgekf5k91upug2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vimalcvs.ringtone_app",
+            "certificate_hash": "976f75958dd7b0550a420e522d849c6084dafddc"
+          }
+        },
+        {
+          "client_id": "690266354741-de2c0t2qqv2pjf3geuqbh8afq179pami.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vimalcvs.ringtone_app",
+            "certificate_hash": "6faf28510e347c3b61e9d0deb7b43a95d89e1f7b"
+          }
+        },
+        {
+          "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqK2dXmV-Ib6K0ofTbhCa0SC8-WQRA4vs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690266354741:android:6d6d9163bbfcbdec",
+        "android_client_info": {
+          "package_name": "com.vimalcvs.status_video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqK2dXmV-Ib6K0ofTbhCa0SC8-WQRA4vs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690266354741:android:20e15d13aad1a001",
+        "android_client_info": {
+          "package_name": "com.vimalcvs.stickers_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690266354741-c3q285kt04pi97i3r6856kr40coqdpr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqK2dXmV-Ib6K0ofTbhCa0SC8-WQRA4vs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

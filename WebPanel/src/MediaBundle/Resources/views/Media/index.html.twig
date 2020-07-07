@@ -1,0 +1,24 @@
+{% extends 'MediaBundle::layout.html.twig' %}
+{% block body %}
+	<div class="notif">
+		<div class="notif-head">
+			<a href="{{path("media_add",{CKEditor:app.request.query.get("CKEditor"),CKEditorFuncNum:app.request.query.get("CKEditorFuncNum"),langCode:app.request.query.get("langCode")})}}" class="notif-close"><i class="fa fa-plus" aria-hidden="true"></i>Add image</a>
+			<span class="notif-title">Images List</span>
+		</div>
+		<div class="notif-body clearfix">
+			{% for media in pagination %}
+				<div class="thumb img-thumbnail">
+					<img  src="{{media.link|imagine_filter('media_thumb')}}">
+					<div>{{media.titre}}</div>
+					<div class="select"  onclick='sendToParent("{{media.link|imagine_filter('media_article')}}");window.close();'> Insert Image <i class="fa fa-plus" aria-hidden="true"></i></div>
+				</div>
+			{% else %}
+			Images list is empty "Add new image" to insert image
+			{% endfor %}
+		</div>
+		<div>
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+
+{% endblock %}

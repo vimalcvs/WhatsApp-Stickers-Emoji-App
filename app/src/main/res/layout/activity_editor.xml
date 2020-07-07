@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <com.alexvasilkov.gestures.views.GestureFrameLayout
+        android:layout_above="@id/controllers"
+        android:id="@+id/gestureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <!-- GestureFrameLayout can contain only one child -->
+
+        <FrameLayout
+            android:id="@+id/drawViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.vimalcvs.stickers_app.ui.DrawView
+                android:id="@+id/drawView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/loadingModal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/loadingView"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </com.alexvasilkov.gestures.views.GestureFrameLayout>
+        <FrameLayout
+            android:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/photo_edit_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000"
+                android:elevation="4dp"
+                android:minHeight="?attr/actionBarSize"
+                app:titleTextColor="#000"
+                android:theme="?attr/actionBarTheme">
+
+            <RelativeLayout
+                android:layout_marginLeft="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <Button
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/undo"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/undo_selector"  />
+
+                        <Button
+                            android:id="@+id/redo"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/redo_selector" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/controllers"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:weightSum="4"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+                    <Button
+                        android:id="@+id/zoom_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/magnifier_selector"
+                        />
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+            <Button
+                android:id="@+id/auto_clear_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/magic_selector"
+                android:padding="5dip" />
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+
+                <Button
+                    android:id="@+id/manual_clear_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/pencil_selector"
+                    android:padding="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="60dp">
+            <Button
+                android:backgroundTint="@color/colorAccent"
+                android:id="@+id/done"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_check" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:elevation="10dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_dialog"
+            android:padding="15dp"
+            android:layout_above="@id/controllers"
+            android:id="@+id/manual_clear_settings_layout"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eraser size:"
+                android:textColor="#000" />
+            <SeekBar
+                android:layout_toRightOf="@+id/textView"
+                android:id="@+id/strokeBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="30"
+                android:progress="15" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

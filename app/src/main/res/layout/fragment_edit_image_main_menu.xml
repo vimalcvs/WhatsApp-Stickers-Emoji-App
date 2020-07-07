@@ -1,0 +1,137 @@
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:id="@+id/btn_paint"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="5dp"
+                android:clickable="false"
+                android:id="@+id/zoom_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_format_paint"
+                />
+            <TextView
+                android:textSize="11dp"
+                android:text="Paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:id="@+id/btn_stickers"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="5dp"
+
+                android:clickable="false"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_filter_vintage"
+                />
+            <TextView
+                android:textSize="11dp"
+                android:text="Stickers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:id="@+id/btn_crop"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="5dp"
+
+                android:clickable="false"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_crop_black"
+                />
+            <TextView
+                android:textSize="11dp"
+                android:text="Crop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:id="@+id/btn_rotate"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="5dp"
+
+                android:clickable="false"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_rotate"
+                />
+            <TextView
+                android:textSize="11dp"
+                android:text="Ratation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:id="@+id/btn_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:padding="5dp"
+
+                android:clickable="false"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_text_fields"
+                />
+            <TextView
+                android:textSize="11dp"
+                android:text="Add Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+

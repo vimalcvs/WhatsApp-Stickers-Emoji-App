@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{asset("css/box.css")}}">
+
+	<link rel="stylesheet" href="{{asset("font-awesome/css/font-awesome.min.css")}}">
+</head>
+<body>
+<script type="text/javascript">
+function sendToParent(file_path) {
+    window.opener.InsertHTML(file_path);
+}
+</script>
+{% block body %}
+    
+{% endblock %}
+</body>
+</html>

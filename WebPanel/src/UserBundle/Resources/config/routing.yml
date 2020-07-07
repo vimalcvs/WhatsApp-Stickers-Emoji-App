@@ -1,0 +1,100 @@
+api_user_get_followingstop:
+    path:     /api/user/followingstop/{user}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_followingstop }
+api_user_register:
+  path: /api/user/register/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_register}
+  methods: POST
+api_user_edit:
+  path: /api/user/edit/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_edit}
+  methods: POST
+api_user_token:
+  path: /api/user/token/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_token}
+  methods: POST
+api_user_login:
+  path: /api/user/login/{username}/{password}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_login}
+  methods: GET
+user_user_index:
+  path: /users/index.html
+  defaults: { _controller: UserBundle:User:index}
+user_user_edit:
+  path: /users/edit/{id}.html
+  defaults: { _controller: UserBundle:User:edit}
+  requirements:
+      id:  \d+
+user_user_followers:
+  path: /users/followers/{id}.html
+  defaults: { _controller: UserBundle:User:followers}
+  requirements:
+      id:  \d+
+user_user_followings:
+  path: /users/followings/{id}.html
+  defaults: { _controller: UserBundle:User:followings}
+  requirements:
+      id:  \d+
+user_user_comments:
+  path: /users/comments/{id}.html
+  defaults: { _controller: UserBundle:User:comments}
+  requirements:
+      id:  \d+
+user_user_ratings:
+  path: /users/ratings/{id}.html
+  defaults: { _controller: UserBundle:User:ratings}
+  requirements:
+      id:  \d+
+user_user_packs:
+  path: /users/packs/{id}.html
+  defaults: { _controller: UserBundle:User:packs}
+  requirements:
+      id:  \d+
+user_user_view:
+  path: /users/view/{id}.html
+  defaults: { _controller: UserBundle:User:view}
+  requirements:
+      id:  \d+
+
+api_user_change_password:
+  path: /api/user/password/{id}/{password}/{new_password}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_change_password}
+  methods: GET
+api_user_edit_name:
+  path: /api/user/name/{id}/{name}/{key}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_edit_name}
+  methods: GET
+api_user_email:
+  path: /api/user/email/{email}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:Resetting:api_email}
+  methods: GET
+api_user_request:
+  path: /api/user/request/{key}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:Resetting:api_request}
+  methods: GET
+api_user_reset:
+  path: /api/user/reset/{id}/{key}/{new_password}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:Resetting:api_reset}
+  methods: GET
+api_user_check:
+  path: /api/user/check/{id}/{key}/{token}/{purchase}/
+  defaults: { _controller: UserBundle:User:api_check}
+  methods: GET
+api_user_upload:
+    path:     /api/user/upload/{id}/{key}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_upload }
+api_user_get:
+    path:     /api/user/get/{user}/{me}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_get }
+api_user_follow:
+    path:     /api/user/follow/{user}/{follower}/{key_}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_follow }
+api_user_follow_check:
+    path:     /api/user/follow/check/{user}/{follower}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_follow_check }
+api_user_get_followers:
+    path:     /api/user/followers/{user}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_followers }
+api_user_get_followings:
+    path:     /api/user/followings/{user}/{token}/{purchase}/
+    defaults: { _controller: UserBundle:User:api_followings }

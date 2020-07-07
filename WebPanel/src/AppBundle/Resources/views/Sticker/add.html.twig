@@ -1,0 +1,32 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-offset-2 col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="rose">
+                        <i class="material-icons">insert_emoticone</i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Add Sticker</h4>
+                        {{form_start(form)}}
+                        <form method="#" action="#">
+                            <div class="fileinput fileinput-new text-center" style="    width: 100%;" data-provides="fileinput">
+                                <div class="fileinput-new thumbnail" style="    width: 100%;">
+                                    <img  id="img-preview" src="{{asset("img/image_placeholder.jpg")}}"  width="100%" style="border-radius:5px;border:1px solid #ccc;padding:10px;">
+                                </div>
+                                {{form_widget(form.file,{"attr":{"class":"is-input-file","style":"    display: none;"}})}}
+                                <div class="fileinput-preview thumbnail"></div>
+                                <div>
+                                    <a href="#" class="btn btn-rose btn-round btn-select-sticker"><i class="material-icons">image</i> Select image </a>
+                                </div>
+                                <span class="validate-input">{{form_errors(form.file)}}</span>
+                            </div>
+                            <span class="pull-right"><a href="{{path("app_pack_stickers",{id:pack.id})}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+                            {{form_end(form)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock%}

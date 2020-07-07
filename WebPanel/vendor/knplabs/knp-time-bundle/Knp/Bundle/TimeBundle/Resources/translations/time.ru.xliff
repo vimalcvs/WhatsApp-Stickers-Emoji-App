@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>diff.ago.year</source>
+                <target>%count% год назад|%count% года назад|%count% лет назад</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>diff.ago.month</source>
+                <target>%count% месяц назад|%count% месяца назад|%count% месяцев назад</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>diff.ago.day</source>
+                <target>%count% день назад|%count% дня назад|%count% дней назад</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>diff.ago.hour</source>
+                <target>%count% час назад|%count% часа назад|%count% часов назад</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>diff.ago.minute</source>
+                <target>%count% минуту назад|%count% минуты назад|%count% минут назад</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>diff.ago.second</source>
+                <target>%count% секунду назад|%count% секунды назад|%count% секунд назад</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>diff.empty</source>
+                <target>сейчас</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>diff.in.second</source>
+                <target>через %count% секунду|через %count% секунды|через %count% секунд</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>diff.in.hour</source>
+                <target>через %count% час|через %count% часа|через %count% часов</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>diff.in.minute</source>
+                <target>через %count% минуту|через %count% минуты|через %count% минут</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>diff.in.day</source>
+                <target>через %count% день|через %count% дня|через %count% дней</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>diff.in.month</source>
+                <target>через %count% месяц|через %count% месяца|через %count% месяцев</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>diff.in.year</source>
+                <target>через %count% год|через %count% года|через %count% лет</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

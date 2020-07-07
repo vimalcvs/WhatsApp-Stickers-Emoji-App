@@ -1,0 +1,30 @@
+{% extends 'MediaBundle::layout.html.twig' %}
+{% block body %}
+	{% if media.id !=null %}
+		<script type="text/javascript">
+		sendToParent("{{asset(media.link)|imagine_filter('media_article')}}");
+		window.close();
+		</script>
+	{% endif %}
+	<div class="notif" >
+		<div class="notif-head">
+			<a href="{{path("media_index",{CKEditor:app.request.query.get("CKEditor"),CKEditorFuncNum:app.request.query.get("CKEditorFuncNum"),langCode:app.request.query.get("langCode")})}}" class="notif-close"><i class="fa fa-chevron-left" aria-hidden="true"></i>Images list</a>
+			<span class="notif-title">Add image</span>
+		</div>
+		{{ form_start(form)}}
+		
+		<div class="notif-body clearfix" dir="rtl">
+			<div class="thumb img-thumbnail upload" onclick="document.getElementById('form_file').click()">
+				<img>
+				<div class="select"> Click to add image to article <br>	 <i class="fa fa-camera fa-5x" aria-hidden="true"></i></div>
+				{{form_widget(form.file,{"attr":{"style":"opacity:0;"}})}}
+			</div>
+			<div class="errors-form">
+				{{form_errors(form.file)}}
+			</div>
+			<br>
+			<button class="btn btn-hiya" style="width:300px;" >Upload image<i class="fa fa-send" aria-hidden="true"></i></button>
+			{{form_end(form)}}
+		</div>
+	</div>
+{% endblock %}

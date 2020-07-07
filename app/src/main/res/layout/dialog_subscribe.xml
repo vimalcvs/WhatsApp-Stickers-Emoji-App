@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/bg_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="10dp"
+                    android:tint="@color/black"
+                    app:srcCompat="@drawable/ic_subscribe"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"
+                    android:gravity="center|left"
+                    android:textSize="14dp"
+                    android:text="Be Premium Be Free"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:background="@color/primary_text_light"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dialog_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_light"
+                android:padding="13dp"
+                android:text="@string/description_subsribte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="#ccc"
+                    android:background="@drawable/bg_round_gopro"
+                    android:padding="7dp"
+                    app:srcCompat="@drawable/ic_premium"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <TextView
+                        android:textSize="14dp"
+                        android:gravity="center|left"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text_light"
+                        android:text="@string/dialog_text_no_premium_wallpapers_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:textSize="10dp"
+                        android:gravity="center|left"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text_light"
+                        android:text="@string/dialog_text_no_premium_wallpapers_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:tint="#ccc"
+                    android:background="@drawable/bg_round_gopro"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_stop_ads"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <TextView
+                        android:textSize="14dp"
+                        android:gravity="center|left"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text_light"
+                        android:text="@string/dialog_text_no_ads_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:textSize="10dp"
+                        android:gravity="center|left"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text_light"
+                        android:text="@string/dialog_text_no_ads_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/dialog_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/relative_layout_watch_ads"
+                android:layout_centerHorizontal="true"
+                android:background="#00b679"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:id="@+id/text_view_watch_ads"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="Watch Video ads"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:layout_centerHorizontal="true"
+                android:background="#ff9b05"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+                <TextView
+                    android:id="@+id/text_view_go_pro"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="SUBSCRIBE NOW"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

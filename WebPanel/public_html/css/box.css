@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'DroidKufi';
+	src: url('../fonts/DroidKufi-Regular.ttf');
+}
+
+label {
+	font-family: "DroidKufi";
+}
+
+body {
+	background-color: #fff;
+	overflow: auto;
+}
+
+.notif {
+	min-height: 100px;
+	width: calc(100% - 20px);
+	background: white;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	z-index: 6;
+	box-shadow: 0px 0px 20px -8px #000;
+	border-radius: 5px;
+	border: 1px solid #009688;
+}
+
+.notif-head {
+	height: 50px;
+	background: #009688;
+}
+
+.notif-body {
+	padding: 10px;
+	text-align: center;
+	background-color: #f0f0f0;
+	font-family: "DroidKufi";
+}
+
+.notif-title {
+	font-family: "DroidKufi";
+	width: 100%;
+	display: inline-table;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	font-size: 14pt;
+}
+
+.notif-close {
+	height: 50px;
+	display: inline-table;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	background-color: #0e867b;
+	font-family: "DroidKufi";
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.notif-close:hover {
+	background-color: #0e867b;
+}
+
+.thumb {
+	background: red;
+	width: 210px;
+	height: 270px;
+	background: white;
+	display: inline-block;
+	float: right;
+	margin: 5px;
+	font-family: monospace;
+	position: relative;
+}
+
+.thumb>div {
+	word-wrap: break-word
+}
+.thumb>img {
+	width: 100%;
+}
+.thumb .select {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	line-height: 50px;
+	border-top: 1px solid #f0f0f0;
+	font-family: "DroidKufi";
+	z-index: 2;
+	left: 0px;
+	opacity: 0;
+	line-height: 290px;
+	left: 0px;
+	background: #009688;
+	cursor: pointer;
+	color: white;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	-ms-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.upload .select {
+	opacity: 1;
+	line-height: 100px;
+	border: 5px dashed #009688;
+	background-color: #f0f0f0;
+	color: #009688;
+	border-radius: 20px;
+}
+
+.upload {
+	float: none;
+	margin: auto 0%;
+	width: 300px;
+}
+
+.thumb .select:hover {
+	opacity: 1;
+}
+
+.btn-hiya,
+.pagination>.page>a,
+.pagination>.current,
+.pagination>.last>a,
+.pagination>.previous>a,
+.pagination>.next>a,
+.pagination>.first>a {
+	background-color: #009688;
+	font-family: "DroidKufi";
+	color: #e4e4e4;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.btn-hiya:hover,
+.pagination>.page>a:hover,
+.pagination>.current,
+.pagination>.first>a:hover,
+.pagination>.next>a:hover,
+.pagination>.last>a:hover,
+.pagination>.previous>a:hover {
+	background-color: #902560;
+	color: #e4e4e4;
+}
+
+.errors-form {
+	color: red;
+}

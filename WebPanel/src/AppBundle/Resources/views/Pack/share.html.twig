@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{setting.appname}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="{{setting.appname}}">
+    <meta name="description" content="{{setting.appdescription}}">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
+    <link href="{{asset("css/style.css")}}" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+    <!-- Nav Menu -->
+    <header class="bg-gradient" id="home">
+        <div class="container mt-5">
+            <h1>{{setting.appname}}</h1>
+            <p class="tagline">{{setting.appdescription}}</p>
+            <br>
+            <a href="{{setting.googleplay}}"><img src="{{asset("img/gplay.png")}}" style="    width: 350px;" class="img"></a>
+            <br>
+            <br>
+            <div class="img-holder mt-3"><img src="{{asset(setting.media.link)}}" alt="phone" class="img-fluid img"></div>
+        </div>
+    </header>
+</body>
+
+</html>

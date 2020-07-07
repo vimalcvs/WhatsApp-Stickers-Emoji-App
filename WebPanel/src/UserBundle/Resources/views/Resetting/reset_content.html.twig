@@ -1,0 +1,19 @@
+<div class="pad col-md-offset-4 col-md-4">
+	{{form_start(form)}}
+	        <div class="form-group label-floating is-empty">
+                {{ form_label(form.new.first) }}
+                {{ form_widget(form.new.first,{"attr":{"class":"form-control"}}) }}
+                <span class="error-form">
+                {{ form_errors(form.new.first) }}
+                </span>
+            </div>
+		     <div class="form-group label-floating is-empty">
+                {{ form_label(form.new.second) }}
+                {{ form_widget(form.new.second,{"attr":{"class":"form-control"}}) }}
+                <span class="error-form">
+                {{ form_errors(form.new.second) }}
+                </span>
+            </div> 
+	<input type="submit" class="btn btn-primary  btn-raised col-md-12" name="" value="{{ 'resetting.reset.submit'|trans({}, 'FOSUserBundle') }}">
+	{{form_end(form)}}
+</div>

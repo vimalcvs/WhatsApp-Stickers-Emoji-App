@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:padding="3dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:elevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relative_layout_subscribte_item"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <ImageView
+                android:id="@+id/image_view_item_subscribe_thum"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"
+                android:layout_width="100dp"
+                android:layout_height="120dp" />
+            <LinearLayout
+                android:background="@drawable/background_following"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <RelativeLayout
+                    android:padding="3dp"
+                    android:background="@drawable/bg_user"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:background="@drawable/bg_round_user"
+                        android:id="@+id/image_view_follow_iten"
+                        android:padding="3dp"
+                        android:src="@drawable/profile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                </RelativeLayout>
+                <TextView
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="50dp"
+                    android:id="@+id/text_view_follow_itme_label"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_user_label"
+                    android:textStyle="bold"
+                    android:textSize="7dp"
+                    android:text="2 hours ago"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,99 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+   <div class="container-fluid">
+    <div class="row">
+         <div class="col-md-12" style=" height: auto; text-align:center;background-image:url({{asset(user.image)}});background-position: center;background-size: 100%;text-align: center;">
+                <img src="{{asset(user.image)}}" alt="" style="border-radius:300px;margin:10px;height:100px;width:100px;border: 5px solid rgb(255, 247, 247);">
+                <h3 style=" color: white; font-weight: bold">{{user.name}}</h3>
+         </div>
+        <div  class="col-md-12" style="border:1px solid #ccc;height:70px;background:white">
+             <div class="row">
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_edit",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">Edit infos</a>
+                </div>
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followings",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.users|length}} Following </a>
+                </div>
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followers",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.followers|length}} Followers </a>
+                </div>
+                <div  class="col-md-3" style="height:70px;background:white">
+                <a href="{{path("user_user_packs",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.packs|length}} Packs </a>
+                </div>
+             </div>       
+        </div>
+        <div  class="col-md-12" style="height:20px;">
+                    
+        </div>
+       <div class="col-sm-offset-2  col-md-8">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">group</i>
+                </div>
+                <div class="card-content">
+                <br>
+               <div class="card-body card-padding">
+                {{ form_start(form,{attr:{"class":"form-horizontal"}}) }}
+                    <div class="form-group fg-line">
+                        {{form_label(form.name,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.name,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.name)}}
+                    </div>
+
+                    <div class="form-group fg-line">
+                        {{form_label(form.email,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.email,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.email)}}
+                    </div>
+                    <div class="form-group fg-line">
+                        {{form_label(form.type,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.type,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.type)}}
+                    </div>
+                    <div class="form-group fg-line">
+                        {{form_label(form.facebook,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.facebook,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.facebook)}}
+                    </div>
+                    <div class="form-group fg-line">
+                        {{form_label(form.emailo,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.emailo,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.emailo)}}
+                    </div>
+                    <div class="form-group fg-line">
+                        {{form_label(form.instagram,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.instagram,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.instagram)}}
+                    </div>
+                    <div class="form-group fg-line">
+                        {{form_label(form.twitter,null,{label_attr:{"class":""}})}}
+                        {{form_widget(form.twitter,{attr:{"class":"form-control"}})}}
+                        {{form_errors(form.twitter)}}
+                    </div>
+                    <div >
+                        <label>
+                            {{form_widget(form.enabled)}}
+                            Enabled
+                        </label>
+                    </div>
+                    <div >
+                        <label>
+                            {{form_widget(form.trusted)}}
+                            Trusted (Add Pack without Review)
+                        </label>
+                    </div>
+
+                    <br>
+                    {{form_widget(form.save,{attr:{"class":"btn btn-success btn-lg waves-effect pull-right"}})}}
+                {{ form_end(form) }}
+                <br>
+                <br>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}

@@ -1,0 +1,60 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-12" style=" height: auto; text-align:center;background-image:url({{asset(user.image)}});background-position: center;background-size: 100%;text-align: center;">
+		    <img src="{{asset(user.image)}}" alt="" style="border-radius:300px;margin:10px;height:100px;width:100px;border: 5px solid rgb(255, 247, 247);">
+		    <h3 style=" color: white; font-weight: bold">{{user.name}}</h3>
+		</div>
+        <div  class="col-md-12" style="border:1px solid #ccc;height:70px;background:white">
+             <div class="row">
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_edit",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">Edit infos</a>
+                </div>
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followings",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.users|length}} Following </a>
+                </div>
+                <div  class="col-md-3" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followers",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.followers|length}} Followers </a>
+                </div>
+                <div  class="col-md-3" style="height:70px;background:white">
+                <a href="{{path("user_user_packs",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.packs|length}} Packs </a>
+                </div>
+             </div>       
+        </div>
+        <div  class="col-md-12" >
+	 		<div class="row">
+				{% for follower in user.users %}
+		       		<div class="col-md-4">
+                        <div class="card card-profile">
+                            <div class="card-avatar">
+                                <a href="#pablo">
+                                	{% if follower.image !="" %}
+                                    <img class="img" src="{{follower.image}}">
+                                    {% else %}
+                                    <img class="img" src="{{asset("img/avatar.jpg")}}">
+
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">{{follower.name}}</h4>
+                                <a href="{{path("user_user_edit",{"id":follower.id})}}" class="btn btn-rose btn-round">VIew</a>
+                            </div>
+                        </div>
+                    </div>
+		         {% else %}
+					<div class="card"  style="text-align: center;" >
+						<br>
+						<br>
+						<img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" ="">
+						<br>
+						<br>
+					</div>
+	            {% endfor %} 
+	        </div>
+    	</div>
+    </div>
+</div>
+
+{% endblock%}

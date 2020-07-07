@@ -1,0 +1,10 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+<div class="pad">
+	<p class="alert alert-primary">
+	{{ 'resetting.check_email'|trans({'%email%': email}, 'FOSUserBundle') }}
+	</p>
+</div>
+
+{% endblock %}

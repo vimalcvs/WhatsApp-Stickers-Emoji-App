@@ -1,0 +1,66 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="tab-moivie">
+                        <a href="{{path("app_home_settings")}}" class="btn btn-tab-movie-active col-md-12"><i class="material-icons">settings</i> Settings</a>
+                        <a href="{{path("app_home_ads")}}" class="btn btn-tab-movie col-md-12"><i class="material-icons">monetization_on</i> Ads Settings</a>
+                        <a href="{{path("fos_user_change_password")}}" class="btn btn-tab-movie col-md-12"><i class="material-icons">lock</i> Change password</a>
+                    </div>
+                </div>
+            </div>
+
+       <div class="col-md-9">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">settings</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Settings</h4>
+                    {{form_start(form)}}
+                        <br>
+                        <div class="form-group label-floating">
+                            <label class="control-label">App Name : </label>
+                            {{form_widget(form.appname,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.appname)}}</span>
+                        </div>
+                        <div class="form-group label-floating">
+                            <label class="control-label">App Description : </label>
+                            {{form_widget(form.appdescription,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.appdescription)}}</span>
+                        </div>
+                        <div class="form-group label-floating">
+                            <label class="control-label">Firebase Legacy server key : </label>
+                            {{form_widget(form.firebasekey,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.firebasekey)}}</span>
+                        </div>
+                        <div class="form-group label-floating">
+                            <label class="control-label">Application url on google play : </label>
+                            {{form_widget(form.googleplay,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.googleplay)}}</span>
+                        </div>
+                        <div class="form-group label-floating">
+                            <label class="control-label">Privacy Policy : </label>
+                            {{form_widget(form.privacypolicy,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.privacypolicy)}}</span>
+                        </div>
+                        <div class="fileinput fileinput-new text-center" style="    width: 100%;" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="    width: 100%;">
+                                <img  id="img-preview" src="{{asset(form.vars.value.media.link)}}"  width="100%">
+                                                                <a href="#" class="btn btn-rose btn-round btn-select"><i class="material-icons">image</i> Select image </a>
+
+                            </div>
+                           {{form_widget(form.file,{"attr":{"class":"file-hidden input-file img-selector","style":"    display: none;"}})}}
+                            </div>
+                            <span class="validate-input">{{form_errors(form.file)}}</span>
+                       </div>
+                        <span class="pull-right"><a href="{{path("app_category_index")}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

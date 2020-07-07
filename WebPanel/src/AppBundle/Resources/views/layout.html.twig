@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset("img/apple-icon.png")}}" />
+    <link rel="icon" type="image/png" href="{{asset("img/favicon.png")}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Admin Panel | Stickers App</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Bootstrap core CSS     -->
+    <link href="{{asset("css/bootstrap.min.css")}}" rel="stylesheet" />
+
+    <!--  Material Dashboard CSS    -->
+    <link href="{{asset("css/material-dashboard.css")}}" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{{asset("css/demo.css")}}" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <script src="{{asset("js/jscolor.js")}}"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset("lib/css/emoji.css")}}" rel="stylesheet">
+    <link href="{{asset("giflib/gifplayer.css")}}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{asset("tags/css/normalize.css")}}">
+    <!--[if IE 8]><script src="{{asset("js/es5.js")}}"></script><![endif]-->
+    <script src="{{asset("js/jquery.min.js")}}"></script>
+    <script src="{{asset("tags/js/standalone/selectize.js")}}"></script>
+    <link rel="stylesheet" href="{{asset("tags/css/selectize.default.css")}}">
+    <script src="https://kayschneider.github.io/pinbox/source/js/jquery.pinbox.min.js"></script>
+            <script>
+            $(document).ready(function () {
+                /**
+                 *  create new pinboxes! ;)
+                 *  
+                 *  avaiable parameters in the options:
+                 *   every new item in the boxes uses the new item Indicator
+                 *   
+                 *   newitemindicator : "new", 
+                 *   subcontainer : ".prodcont" 
+                 */
+                 $('#categoryProductContainer').pinbox().hide(0).fadeIn(1000);
+            });
+        </script>
+</head>
+
+<body>
+    {% for type, messages in app.session.flashbag.all() %}
+        
+        {% for message in messages %}
+            <div class="alert  alert-with-icon {% if type == "error" %} alert-danger {% else %}alert-dashboard{% endif %}" data-notify="container"  style="position: absolute;right: 20px;top: 0px;z-index: 1000;">
+                <i class="material-icons" data-notify="icon">notifications</i>
+                <button type="button" aria-hidden="true" class="close">
+                    <i class="material-icons">close</i>
+                </button>
+                <span data-notify="message">{{message|trans}}</span>
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="wrapper">
+        <div class="sidebar" data-active-color="blue"  data-background-color="white" >
+              <!--
+                  Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+                  Tip 2: you can also add an image using data-image tag
+              -->
+              <div class="logo">
+                  <img src="{{asset("img/admin.png")}}" style="height: 100px;width: 100px;">
+                  <a href="{{path("app_home_index")}}" class="simple-text">
+
+                      VIDEO STATUS ADMIN
+                  </a>
+              </div>
+              <div class="sidebar-wrapper" style="overflow: scroll;padding-bottom: 100px;">
+                     <ul class="nav">
+                        <li {% if "app_home_index" in  app.request.attributes.get('_route') %} class="active"{% endif %}>
+                            <a href="{{path("app_home_index")}}">
+                                <i class="material-icons">dashboard</i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li {% if "app_home_notif_" in  app.request.attributes.get('_route') %} class="active"  aria-expanded="true" {% endif %}>
+                            <a data-toggle="collapse" href="#notification" class="" >
+                                <i class="material-icons">notifications_active</i>
+                                <p>Notifications
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <div class="collapse {% if "app_home_notif_" in  app.request.attributes.get('_route') %}  in {% endif %}" id="notification" aria-expanded="true" style="">
+                                <ul class="nav">
+                                    <li  {% if "app_home_notif_pack" in  app.request.attributes.get('_route') %} class="active" {% endif %}><a href="{{path("app_home_notif_pack")}}">Sticker Packs</a></li>
+                                    <li  {% if "app_home_notif_category" in  app.request.attributes.get('_route') %} class="active" {% endif %}><a href="{{path("app_home_notif_category")}}">Category</a></li>
+                                    <li  {% if "app_home_notif_url" in  app.request.attributes.get('_route') %} class="active" {% endif %}><a href="{{path("app_home_notif_url")}}">Url</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li {% if "app_slide_" in  app.request.attributes.get('_route')  %} class="active"{% endif %}>
+                            <a href="{{path("app_slide_index")}}">
+                                <i class="material-icons">slideshow</i>
+                                <p>Slides</p>
+                            </a>
+                        </li>
+                        <li {% if "app_category_" in  app.request.attributes.get('_route')  %} class="active"{% endif %}>
+                            <a href="{{path("app_category_index")}}">
+                                <i class="material-icons">view_list</i>
+                                <p>Categories</p>
+                            </a>
+                        </li>
+                        <li {% if "app_pack_i" in  app.request.attributes.get('_route')  %} class="active"{% endif %}>
+                            <a href="{{path("app_pack_index")}}">
+                                <i class="material-icons">inbox</i>
+                                <p>Sticker Packs</p>
+                            </a>
+                        </li>
+                        <li {% if "app_pack_r" in  app.request.attributes.get('_route')  %} class="active"{% endif %}>
+                            <a href="{{path("app_pack_reviews")}}">
+                                <i class="material-icons">playlist_add_check</i>
+                                <p>Packs to review</p>
+                            </a>
+                        </li>
+                        <li {% if "tag" in  app.request.attributes.get('_route')  %} class="active"{% endif %}>
+                            <a href="{{path("app_home_tags")}}">
+                                <i class="material-icons">label</i>
+                                <p>Tags</p>
+                            </a>
+                        </li>
+                        <li {% if "support" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                            <a href="{{path("app_support_index")}}">
+                            <i class="material-icons">messages</i>
+                                <p>Support messages</p>
+                            </a>
+                        </li>
+                        <li {% if "version" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                            <a href="{{path("app_version_index")}}">
+                            <i class="material-icons">apps</i>
+                                <p>Versions App</p>
+                            </a>
+                        </li>
+                        <li {% if "user" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                            <a href="{{path("user_user_index")}}">
+                            <i class="material-icons">group</i><p>Users</p>
+                            </a>
+                        </li>
+                        <li {% if "setting" in  app.request.attributes.get('_route') %} class="active"{% endif %}  >
+                            <a href="{{path("app_home_settings")}}">
+                            <i class="material-icons">settings</i><p>Settings</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path("fos_user_change_password")}}">
+                            <i class="material-icons">lock</i><p>Change Password</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path("fos_user_security_logout")}}">
+                            <i class="material-icons">exit_to_app</i><p>Logout</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="main-panel" style="overflow: scroll">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Dashboard</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content">
+                {% block body %}
+                    
+                {% endblock %}
+            </div>
+
+            <footer class="footer">
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="{{asset("js/jquery-3.1.0.min.js")}}" type="text/javascript"></script>
+    <script src="{{asset("js/bootstrap.min.js")}}" type="text/javascript"></script>
+    <script src="{{asset("js/material.min.js")}}" type="text/javascript"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="{{asset("js/bootstrap-notify.js")}}"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Material Dashboard javascript methods -->
+    <script src="{{asset("js/material-dashboard.js")}}"></script>
+
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="{{asset("js/demo.js")}}"></script>
+    <script src="{{asset("js/app.js")}}"></script>
+  <script src="{{asset("lib/js/config.js")}}"></script>
+  <script src="{{asset("lib/js/util.js")}}"></script>
+  <script src="{{asset("lib/js/jquery.emojiarea.js")}}"></script>
+  <script src="{{asset("lib/js/emoji-picker.js")}}"></script>
+
+
+    <script>
+      $(function() {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiable=true]',
+          assetsPath: '../lib/img/',
+          popupButtonClasses: 'fa fa-smile-o'
+        });
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+        // It can be called as many times as necessary; previously converted input fields will not be converted again
+        window.emojiPicker.discover();
+      });
+    </script>
+
+</html>                                                                                                 

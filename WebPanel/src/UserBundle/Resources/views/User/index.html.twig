@@ -1,0 +1,108 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <a href="{{path("user_user_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">queue_music</i> {{(users|length)-1}} users</a>
+      </div>
+      <div class="col-md-4">
+        <form method="get" class="btn btn  btn-yellow" style="    width: 100%;">
+              <input type="text" placeholder="Email/Nom" value="{{ app.request.query.get("q") }}" name="q" style="background: none;border: none;border-bottom: 1px solid white;">
+          <button type="submit" style="background: none;border: none;"><i class="material-icons" style="font-size: 40px;">search</i></button>
+        </form>
+      </div>
+    </div>
+      <div class="card">
+          <div class="card-content">
+              <h4 class="card-title">Messages list</h4>
+              <div class="table-responsive">
+                  <table class="table" width="100%">
+                      <thead class="text-primary">
+                        <tr>
+                          <th width="70px">#</th>
+                          <th>Full name</th>
+                          <th>Facebook/Google Id</th>
+                          <th>Enabled</th>
+                          <th>State</th>
+                          <th width="160px">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for user in pagination %}
+                          <tr>
+                              <td width="70px">       
+                                <div class="avatar">             
+                                {% if user.image != null %}
+                                    <img class="avatar-char palette-Red-400 bg"  style="border-radius: 100px;    border: 0.5px solid #ccc;" src="{{asset(user.image)}}" alt="">
+                                {% endif %}
+                                {% if user.type=="facebook" %}
+                                    <img class="badge-avatar" src="{{asset("img/facebook.png")}}" >
+                                {% elseif user.type=="google" %}
+                                    <img class="badge-avatar" src="{{asset("img/google.png")}}" >
+                                {% else %}
+                                    <img class="badge-avatar" src="{{asset("img/mobile.png")}}" >
+                                {% endif %}
+                                </div>
+                              </td>
+                              <td>{{user.name}}</td>
+                              <td>{{user.username}}</td>
+                              <td>
+                                {% if user.enabled==true %}
+                                  <span class="label label-success">Enabled</span>
+                                {% else %}
+                                  <span class="label label-danger">Disabled</span>
+                                {% endif %}
+                              </td>
+                              <td>
+                                {% if user.trusted==true %}
+                                  <span class="label label-success">Trusted</span>
+                                {% endif %}
+                              </td>
+                              <td>
+                                  <a href="{{path("user_user_edit",{"id":user.id})}}" rel="tooltip" data-placement="left" class=" btn btn-primary btn-xs btn-round" data-original-title="View">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                              </td>
+
+                          </tr>
+                          {% else %}
+                      <tr>
+                        <td colspan="4">
+                          <br>
+                          <br>
+                          <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+                            <br>
+                            <br>
+                        </td>
+                      </tr> 
+                {% endfor %}
+                      </tbody>
+                  </table>
+
+              </div>
+          </div>
+
+        </div>
+              <div class=" pull-right">
+        {{ knp_pagination_render(pagination) }}
+      </div>
+      </div>
+
+  </div>
+                            
+
+
+
+
+
+
+{% endblock%}

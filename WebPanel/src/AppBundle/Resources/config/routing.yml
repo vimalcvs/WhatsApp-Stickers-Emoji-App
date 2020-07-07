@@ -1,0 +1,283 @@
+app_home_index:
+    path:     /
+    defaults: { _controller: AppBundle:Home:index }
+app_home_ads:
+    path:     /ads.html
+    defaults: { _controller: AppBundle:Home:ads }
+app_home_settings:
+    path:     /settings.html
+    defaults: { _controller: AppBundle:Home:settings }
+app_home_tags:
+    path:     /tags.html
+    defaults: { _controller: AppBundle:Home:tags }
+app_home_tags_delete:
+    path:     /tags/delete/{id}.html
+    defaults: { _controller: AppBundle:Home:deletetag }
+    requirements:
+        id:  \d+
+app_home_privacypolicy:
+    path:     /privacy_policy.html
+    defaults: { _controller: AppBundle:Home:privacypolicy }
+app_home_notif_pack:
+    path:     /notif/pack.html
+    defaults: { _controller: AppBundle:Home:notifPack }
+app_home_notif_url:
+    path:     /notif/url.html
+    defaults: { _controller: AppBundle:Home:notifUrl }
+app_home_notif_user_pack:
+    path:     /notif/user_pack.html
+    defaults: { _controller: AppBundle:Home:notifUserpack }
+app_home_notif_user:
+    path:     /notif/user.html
+    defaults: { _controller: AppBundle:Home:notifUser }
+app_home_notif_category:
+    path:     /notif/category.html
+    defaults: { _controller: AppBundle:Home:notifCategory }
+api_home_api_device:
+    path:   /api/device/{tkn}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Home:api_device }
+app_support_index:
+    path:     /support/index.html
+    defaults: { _controller: AppBundle:Support:index }
+app_support_view:
+    path:     /support/view/{id}.html
+    defaults: { _controller: AppBundle:Support:view }
+app_support_delete:
+    path:     /support/delete/{id}.html
+    defaults: { _controller: AppBundle:Support:delete }
+api_support_add:
+    path:     /api/support/add/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Support:api_add }
+    methods: POST
+
+
+#slide
+app_slide_add:
+    path: /slide/add.html
+    defaults: { _controller: AppBundle:Slide:add}
+app_slide_index:
+    path: /slide/index.html
+    defaults: { _controller: AppBundle:Slide:index}
+app_slide_edit:
+    path: /slide/{id}.html
+    defaults: { _controller: AppBundle:Slide:edit}
+    requirements:
+        id:  \d+
+app_slide_delete:
+    path: /slide/delete/{id}.html
+    defaults: { _controller: AppBundle:Slide:delete}
+    requirements:
+        id:  \d+
+app_slide_up:
+    path: /slide/up/{id}.html
+    defaults: { _controller: AppBundle:Slide:up}
+    requirements:
+        id:  \d+
+app_slide_down:
+    path: /slide/down/{id}.html
+    defaults: { _controller: AppBundle:Slide:down}
+    requirements:
+        id:  \d+
+api_slide_all:
+    path:     /api/slide/all/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Slide:api_all }
+
+
+
+
+#category pack
+app_category_index:
+    path: /category/index.html
+    defaults: { _controller: AppBundle:Category:index}
+app_category_add:
+    path: /category/add.html
+    defaults: { _controller: AppBundle:Category:add}
+app_category_edit:
+    path: /category/edit/{id}.html
+    defaults: { _controller: AppBundle:Category:edit}
+    requirements:
+        id:  \d+
+app_category_delete:
+    path: /category/delete/{id}.html
+    defaults: { _controller: AppBundle:Category:delete}
+    requirements:
+        id:  \d+
+app_category_up:
+    path: /category/up/{id}.html
+    defaults: { _controller: AppBundle:Category:up}
+    requirements:
+        id:  \d+
+app_category_down:
+    path: /category/down/{id}.html
+    defaults: { _controller: AppBundle:Category:down}
+    requirements:
+        id:  \d+
+api_category_all:
+    path:     /api/category/all/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Category:api_all }
+api_category_popular:
+    path:     /api/category/popular/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Category:api_popular }
+api_tags_all:
+    path: /api/tags/all/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Category:api_tags}
+#version
+app_version_add:
+    path: /version/add.html
+    defaults: { _controller: AppBundle:Version:add}
+app_version_index:
+    path: /version/index.html
+    defaults: { _controller: AppBundle:Version:index}
+app_version_edit:
+    path: /version/edit/{id}.html
+    defaults: { _controller: AppBundle:Version:edit}
+    requirements:
+        id:  \d+
+app_version_delete:
+    path: /version/delete/{id}.html
+    defaults: { _controller: AppBundle:Version:delete}
+    requirements:
+        id:  \d+
+api_version_check:
+    path: /api/version/check/{code}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Version:api_check}
+    requirements:
+        code:  \d+
+#pack
+app_pack_sizer:
+    path: /pack/sizer/{id}.html
+    defaults: { _controller: AppBundle:Pack:sizer}
+    requirements:
+        id:  \d+
+app_pack_stickers:
+    path: /pack/stickers/{id}.html
+    defaults: { _controller: AppBundle:Pack:stickers}
+    requirements:
+        id:  \d+
+app_pack_add:
+    path: /pack/add.html
+    defaults: { _controller: AppBundle:Pack:add}
+app_pack_index:
+    path: /pack/index.html
+    defaults: { _controller: AppBundle:Pack:index}
+app_pack_reviews:
+    path: /pack/reviews.html
+    defaults: { _controller: AppBundle:Pack:reviews}
+app_pack_review:
+    path: /pack/review/{id}.html
+    defaults: { _controller: AppBundle:Pack:review}
+    requirements:
+        id:  \d+
+app_pack_edit:
+    path: /pack/{id}.html
+    defaults: { _controller: AppBundle:Pack:edit}
+    requirements:
+        id:  \d+
+app_pack_view:
+    path: /pack/view/{id}.html
+    defaults: { _controller: AppBundle:Pack:view}
+    requirements:
+        id:  \d+
+app_pack_delete:
+    path: /pack/delete/{id}.html
+    defaults: { _controller: AppBundle:Pack:delete}
+    requirements:
+        id:  \d+
+app_pack_share:
+    path: /share/{id}.html
+    defaults: { _controller: AppBundle:Pack:share}
+    requirements:
+api_pack_all:
+    path:     /api/pack/all/{page}/{order}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_all }
+    requirements:
+        page: \d+
+api_pack_my:
+    path:     /api/pack/my/{page}/{user}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_my }
+    requirements:
+        page: \d+
+api_pack_by_category:
+    path:     /api/pack/by/category/{page}/{order}/{category}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_category }
+    requirements:
+        category: \d+
+        page: \d+
+api_pack_by_query:
+    path:     /api/pack/by/query/{page}/{query}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_query }
+api_pack_by_random:
+    path:     /api/pack/by/random/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_random }
+    requirements:
+api_pack_add_copied:
+    path:     /api/pack/add/copied/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_add_copied }
+api_pack_upload:
+    path:     /api/pack/upload/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_upload}
+api_pack_by_user:
+    path:     /api/pack/by/user/{page}/{order}/{user}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_user }
+    requirements:
+        user: \d+
+        page: \d+
+api_pack_by_me:
+    path:     /api/pack/by/me/{page}/{user}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_me }
+    requirements:
+        user: \d+
+        page: \d+
+api_pack_by_follow:
+    path:     /api/pack/by/follow/{page}/{user}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_follow }
+    requirements:
+        page: \d+
+        user: \d+
+api_pack_by_id:
+    path:     /api/pack/by/id/{id}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_by_id }
+    requirements:
+        id: \d+
+api_pack_add_download:
+    path:     /api/pack/add/download/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_add_download }
+    methods: POST
+api_pack_delete:
+    path:     /api/pack/delete/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_delete }
+    methods: POST
+#rate
+api_rate_add:
+    path:     /api/rate/add/{user}/{pack}/{value}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_add_rate }
+api_rate_get:
+    path:     /api/rate/get/{user}/{pack}/{token}/{purchase}/
+    defaults: { _controller: AppBundle:Pack:api_get_rate }
+#stickers
+
+app_sticker_add:
+    path: /new/{id}.html
+    defaults: { _controller: AppBundle:Sticker:add}
+    requirements:
+        id:  \d+
+app_sticker_edit:
+    path: /sticker/{id}.html
+    defaults: { _controller: AppBundle:Sticker:edit}
+    requirements:
+        id:  \d+
+app_sticker_delete:
+    path: /sticker/delete/{id}.html
+    defaults: { _controller: AppBundle:Sticker:delete}
+    requirements:
+        id:  \d+
+app_sticker_up:
+    path: /sticker/up/{id}.html
+    defaults: { _controller: AppBundle:Sticker:up}
+    requirements:
+        id:  \d+
+app_sticker_down:
+    path: /sticker/down/{id}.html
+    defaults: { _controller: AppBundle:Sticker:down}
+    requirements:
+        id:  \d+

@@ -1,0 +1,59 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-sm-offset-2 col-md-8">
+            <div class="card">
+                <div class="card-header card-header-icon" data-background-color="rose">
+                    <i class="material-icons">slideshow</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Edit Slide</h4>
+                    {{form_start(form)}}
+
+                        <label class="control-label">Slide Title</label>
+                        <div class="form-group label-floating">
+                            {{form_widget(form.title,{"attr":{"class":"form-control","data-emojiable":"true","data-emoji-input":"unicode"}})}}
+                            <span class="validate-input">{{form_errors(form.title)}}</span>
+                        </div>
+                        <div class="form-group label-floating ">
+                            <label class="control-label">type</label>
+                            {{form_widget(form.type,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.type)}}</span>
+                        </div>
+                        <div class="form-group label-floating " style="{% if form.vars.value.type != 3  %}display:none{% endif %}">
+                            <label class="control-label" >pack</label>
+                            {{form_widget(form.pack,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.pack)}}</span>
+                        </div>
+                        <div class="form-group label-floating " style="{% if form.vars.value.type != 1  %}display:none{% endif %}">
+                            <label class="control-label">Categories</label>
+                            {{form_widget(form.category,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.category)}}</span>
+                        </div>
+                        <div class="form-group label-floating " style="{% if form.vars.value.type != 2  %}display:none{% endif %}">
+                            <label class="control-label">Url to lunch</label>
+                            {{form_widget(form.url,{"attr":{"class":"form-control"}})}}
+                            <span class="validate-input">{{form_errors(form.url)}}</span>
+                        </div>
+                        <div class="fileinput fileinput-new text-center" style="    width: 100%;" data-provides="fileinput">
+                            <div class="fileinput-new thumbnail" style="    width: 100%;">
+                                <img  id="img-preview" src="{{asset(form.vars.value.media.link)|imagine_filter('slide_thumb')}}"  width="100%">
+                            </div>
+                           {{form_widget(form.file,{"attr":{"class":"file-hidden input-file img-selector","style":"    display: none;"}})}}
+                            <div class="fileinput-preview thumbnail"></div>
+                            <div>
+                                <a href="#" class="btn btn-rose btn-round btn-select"><i class="material-icons">image</i> Select image </a>
+                            </div>
+                            <span class="validate-input">{{form_errors(form.file)}}</span>
+                       </div>   
+                        <span class="pull-right"><span class="pull-right"><a href="{{path("app_slide_index")}}" class="btn btn-fill btn-yellow"><i class="material-icons">arrow_back</i> Cancel</a>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>{{form_widget(form.save,{attr:{"class":"btn btn-fill btn-rose"}})}}</span>
+
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

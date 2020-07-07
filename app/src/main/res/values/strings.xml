@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">WAStickerApps - Stickers for Whatsapp</string>
+
+    <string name="facebook_app_id">2169750233343295</string>
+    <string name="fb_login_protocol_scheme">fb2169750233343295</string>
+
+
+
+    <string name="panel_url">stickers.vimalcvs.com</string>
+
+    <string-array name="fonts">
+        <item>font_1.ttf</item>
+        <item>font_2.ttf</item>
+        <item>font_3.ttf</item>
+        <item>font_4.ttf</item>
+        <item>font_5.ttf</item>
+        <item>font_6.ttf</item>
+        <item>font_7.ttf</item>
+        <item>font_8.ttf</item>
+        <item>font_9.ttf</item>
+        <item>font_10.ttf</item>
+    </string-array>
+
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="version_label">Current version</string>
+    <string name="title_notification">Enable push notifiction</string>
+    <string name="label_notification">Receive push notification</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="label_cache">Clear locally cached images. Currently : </string>
+    <string name="progress_login">Work in progress</string>
+    <string name="message_sended">Message has been sent successfully</string>
+    <string name="error_short_value">Your field is too short</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_name">Full name</string>
+    <string name="hint_message">Your message</string>
+    <string name="send_support">Send Message</string>
+    <string name="error_mail_valide">Please enter a valid E-mail</string>
+
+    <string name="hint_facebook">Facebook url</string>
+    <string name="hint_twitter">Twitter url</string>
+    <string name="hint_instragram">Instagram Url</string>
+    <string name="save">Save</string>
+    <string name="invalide_url">Invalide Url</string>
+    <string name="loading_user_data">Loading user data</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="try_again">Try Again</string>
+    <string name="error_server">Check your internet connexion ...</string>
+    <string name="please_login">Login to your account</string>
+
+    <string name="skip">Skip</string>
+    <string name="rate_our_app">Rate Our App</string>
+    <string name="rate_our_app_message">If you love our application ,please take a moment to rate it .</string>
+    <string name="rate_now">Rate Now</string>
+    <string name="later">LATER</string>
+    <string name="no_again">Don’t ask again</string>
+    <string name="cancel">CANCEL</string>
+
+    <string name="dialog_text_no_ads_title">Turn Off ads</string>
+    <string name="dialog_text_no_premium_wallpapers_title">Premium Content</string>
+    <string name="dialog_text_no_premium_wallpapers_description">Get unlimited Stickerss</string>
+    <string name="dialog_text_no_ads_description">Use App more free without ads</string>
+    <string name="description_subsribte">With our pack. You can enjoy an ad-free experiance . and focus on the  essential!</string>
+
+    <string name="title_home">Home</string>
+    <string name="my_profile">My profile</string>
+    <string name="login">Login / Register</string>
+    <string name="Logout">Logout</string>
+    <string name="share_this_app">Share this App</string>
+    <string name="action_rate">Rate this App</string>
+    <string name="contact_us">Contact us</string>
+    <string name="policy_privacy">Policy privacy</string>
+    <string name="exit">Exit</string>
+
+    <string name="account_disabled">Sorry your account has been locked</string>
+    <string name="login_gg_text">Login with google</string>
+    <string name="message_logout">You are successfully logout</string>
+    <string name="operation_progress">Operation in progress</string>
+
+    <string name="loading">Loading</string>
+    <string name="edit_my_profile">Edit My profile</string>
+    <string name="download_pack_from">Click here to download this stickers</string>
+    <string name="info_pack">Infos pack</string>
+    <string name="pack_publisher">Pack publisher</string>
+    <string name="publisher_email">Publisher E-mail</string>
+    <string name="publisher_website">Publisher Website</string>
+    <string name="license_agreement">License agreement</string>
+    <string name="update_now">Update Now</string>
+
+
+    <string name="title_slide_1">Welcome to Stickers App</string>
+    <string name="description_slide_1">Thank you for download Stickers App ,Enjoy with this Amazing Andoid app with cool features .</string>
+
+    <string name="title_slide_2">Everything organised here</string>
+    <string name="description_slide_2">You can find any content easily by using categories , title , tags .</string>
+
+    <string name="title_slide_3">Be Creative </string>
+    <string name="description_slide_3">Register now and share you creative idea with many users and be one of our community .</string>
+
+    <string name="title_slide_4">Download and share</string>
+    <string name="description_slide_4">Dwonload Any Stickers Pack and use it on your whatsapp app , and share it with your frients  </string>
+
+    <string name="title_slide_5">Favorites</string>
+    <string name="description_slide_5">Create your favorite list and save any content to view it later . </string>
+
+    <string name="title_slide_6">Rate Stickers</string>
+    <string name="description_slide_6">Browse best Stickers collection and give your rating ...</string>
+
+    <string name="title_slide_8">Be Premium,Take your freedom</string>
+    <string name="description_slide_8">Subscribe with a small price , and take your freedom by remove all ads . and download the premuim content</string>
+    <string name="hint_pack_name">Pack name</string>
+    <string name="hint_publisher">Publisher</string>
+    <string name="crop_as_circle">Crop Image as \n Cricle</string>
+    <string name="crop_as_rec">Crop image as \n Rectangle</string>
+    <string name="no_crop">Image Editor \n &amp; Croping</string>
+    <string name="pack_upload_success">Pack has been successfully Uploaded</string>
+    <string name="create_pack">Create your pack</string>
+    <string name="upload_pack">Upload Now</string>
+    <string name="hint_pack_email">Publisher E-mail</string>
+    <string name="hint_pack_website">Website</string>
+    <string name="hint_privacy">Privacy policy</string>
+    <string name="hint_license">License agreement</string>
+    <string name="add_to_whatsapp">Add to Whatsapp</string>
+    <string name="name_short">The pack name very short .</string>
+    <string name="publisher_short">The publisher name very short</string>
+    <string name="tray_image_required">Please select the pack Icon</string>
+    <string name="sticker_number_required">You should select more then 3 sticers</string>
+    <string name="sticker_number_required_min">You should select less then 30 sticers</string>
+
+    <string name="image_chooser_message">Choose an image to cut</string>
+
+    <string name="no_images">no found the image</string>
+    <string name="images">%d images</string>
+    <string name="apply">Apply</string>
+
+    <string name="stickers">stickers</string>
+    <string name="filter">filter</string>
+    <string name="crop">crop</string>
+    <string name="rotate">rotate</string>
+    <string name="text">text</string>
+    <string name="edit">edit</string>
+
+
+
+    <string name="materialcolorpicker__app_name">Android Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__descLib">Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__errHex">Hex Code Format incorrect</string>
+    <string name="materialcolorpicker__inputColor">Color:</string>
+    <string name="materialcolorpicker__btnSelectColor">Select</string>
+    <string name="saving_image">save...</string>
+    <string name="input_hint">input text ...</string>
+
+    <string name="no_choose">please choose a image for edit</string>
+    <string name="auto_newline">AutoNewline</string>
+    <string name="save_error">Save error!</string>
+    <string name="handing">loading...</string>
+
+    <string-array name="filters">
+        <item>origin</item>
+        <item>soft</item>
+        <item>black</item>
+        <item>classic</item>
+        <item>gorgeous</item>
+        <item>retro</item>
+        <item>grace</item>
+        <item>film</item>
+        <item>memory</item>
+        <item>yogurt</item>
+        <item>fleeting</item>
+        <item>shine</item>
+        <item>mosaic</item>
+    </string-array>
+
+    <string name="more">More</string>
+    <string name="exit_without_save">The edited image is not saved. Do you want to exit? </string>
+    <string name="confirm">confirm</string>
+
+    <string name="beauty">beauty</string>
+    <string name="smooth">smooth</string>
+    <string name="white_skin">white skin</string>
+</resources>

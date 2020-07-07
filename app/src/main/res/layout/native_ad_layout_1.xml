@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ad_unit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="10dp"
+        android:dividerHeight="19.0px"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:cardElevation="1dp"
+        android:elevation="1dp"
+        android:divider="@android:color/transparent"
+        app:cardPreventCornerOverlap="false"
+        android:id="@+id/card_view">
+    <RelativeLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/relative_layout_item_imge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.facebook.ads.MediaView
+                            android:elevation="1dp"
+
+                            android:id="@+id/native_ad_media"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" />
+                        <LinearLayout
+                            android:layout_margin="3dp"
+                            android:layout_alignParentRight="true"
+                            android:elevation="2dp"
+                            android:id="@+id/ad_choices_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="horizontal" />
+                        <TextView
+                            android:elevation="2dp"
+                            android:padding="3dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#f4a60b"
+                            android:id="@+id/native_ad_sponsored_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginRight="86dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="3dp">
+
+                            <com.facebook.ads.AdIconView
+                                android:padding="3dp"
+                                android:id="@+id/native_ad_icon"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp">
+
+                                <TextView
+                                    android:id="@+id/native_ad_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="15sp" />
+                                <TextView
+                                    android:id="@+id/native_ad_social_context"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="12sp" />
+                                <TextView
+                                    android:id="@+id/native_ad_body"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:lines="1"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_alignParentRight="true"
+                            android:elevation="7dp"
+                            android:padding="4dp"
+                            android:gravity="center|top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp">
+                                <Button
+                                    android:textStyle="bold"
+                                    android:id="@+id/native_ad_call_to_action"
+                                    android:layout_width="80dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/background_btn_black"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12sp"
+                                    android:lines="2"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

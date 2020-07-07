@@ -1,0 +1,61 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="{{path("app_slide_index")}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">queue_music</i> {{slides|length}} slides</a>
+      </div>
+      <div class="col-md-4">
+        <a href="{{path("app_slide_add")}}" class="btn btn-rose btn-lg pull-right add-button col-md-12" title=""><i class="material-icons" style="font-size: 30px;">add_box</i> NEW slide </a>
+      </div>
+    </div>
+          <div class="row">
+           {% for slide in slides %}
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-content">
+                  <h3>{{slide.clear}}</h3>
+                  <img src="{{asset(slide.media.link)|imagine_filter('slide_thumb')}}" style="width:100%; height:auto;    border-radius: 5px;" >
+                  <br>
+                </div>
+                <div class="card-footer" style="    text-align: center;">
+                  <a href="{{path("app_slide_edit",{"id":slide.id})}}" rel="tooltip" data-placement="left" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <a href="{{path("app_slide_delete",{"id":slide.id})}}" rel="tooltip" data-placement="left" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+                                <i class="material-icons">delete</i>
+                            </a>
+              <a href="{{path("app_slide_up",{"id":slide.id})}}" rel="tooltip" data-placement="left" class=" btn btn-info btn-xs btn-round" data-original-title="Up">
+                <i class="material-icons">keyboard_arrow_up</i>
+              </a>
+              <a href="{{path("app_slide_down",{"id":slide.id})}}" rel="tooltip" data-placement="left" class=" btn btn-info btn-xs btn-round" data-original-title="Down">
+                <i class="material-icons">keyboard_arrow_down</i>
+              </a>
+                </div>
+              </div>
+            </div>
+        {% else %}
+          <div class="col-md-12">
+        <div class="card">
+              <div class="card-content">
+                <br>
+                <br>
+                <center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+                  <br>
+                  <br>
+              </div>
+            </div>
+            </div>
+      {% endfor %}
+      </div>
+      
+
+      </div>
+  </div>
+                            
+{% endblock%}

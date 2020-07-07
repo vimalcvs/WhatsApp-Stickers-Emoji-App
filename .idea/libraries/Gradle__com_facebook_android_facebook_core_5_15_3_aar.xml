@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.facebook.android:facebook-core:5.15.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab3549aa0830d577635dcaad9f039b4c/jetified-facebook-core-5.15.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab3549aa0830d577635dcaad9f039b4c/jetified-facebook-core-5.15.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/5.15.3/51166b910aa6ba589236b41d84624722b96a69ab/facebook-core-5.15.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/5.15.3/a3a6c3cd110f05e4968ec22a6245f4a2ad189ac3/facebook-core-5.15.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

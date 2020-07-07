@@ -1,0 +1,37 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+	<div class="swal2-modal swal2-show" style="display: block; width: 500px; padding: 20px; background: rgb(255, 255, 255); min-height: 332px;" tabindex="-1">
+	    <ul class="swal2-progresssteps" style="display: none;"></ul>
+	    <div class="swal2-icon swal2-error" style="display: none;"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span>
+	    </div>
+	    <div class="swal2-icon swal2-question" style="display: none;">?</div>
+	    <div class="swal2-icon swal2-warning pulse-warning" style="display: block;">!</div>
+	    <div class="swal2-icon swal2-info" style="display: none;">i</div>
+	    <div class="swal2-icon swal2-success" style="display: none;"><span class="line tip"></span> <span class="line long"></span>
+	        <div class="placeholder"></div>
+	        <div class="fix"></div>
+	    </div><img class="swal2-image" style="display: none;">
+	    <h2>Are you sure</h2>
+	    <div class="swal2-content" style="display: block;">Do you really want to delete this Category</div>
+	    <input class="swal2-input" style="display: none;">
+	    <input type="file" class="swal2-file" style="display: none;">
+	    <div class="swal2-range" style="display: none;">
+	        <output></output>
+	        <input type="range">
+	    </div>
+	    <select class="swal2-select" style="display: none;"></select>
+	    <div class="swal2-radio" style="display: none;"></div>
+	    <label for="swal2-checkbox" class="swal2-checkbox" style="display: none;">
+	        <input type="checkbox">
+	    </label>
+	    <textarea class="swal2-textarea" style="display: none;"></textarea>
+	    <div class="swal2-validationerror" style="display: none;"></div>
+	    <hr class="swal2-spacer" style="display: block;">
+	    {{form_start(form)}}
+              {{form_widget(form.Yes,{"attr":{"class":"swal2-confirm btn btn-success"}})}}
+              <a href="{{path("app_category_index")}}" class="swal2-cancel btn btn-danger">Cancel</a>
+		{{form_end(form)}}
+	</div>
+</div>
+{% endblock%}

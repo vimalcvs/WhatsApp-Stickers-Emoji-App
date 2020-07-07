@@ -1,0 +1,20 @@
+{% extends 'MediaBundle::layout.html.twig' %}
+{% block body %}
+	<div class="notif">
+		<div class="notif-head">
+			<span class="notif-close"><i class="fa fa-plus" aria-hidden="true"></i>  اظافة صورة جديدية</span>
+			<span class="notif-title">قاءمة الصورة الخاصة بك</span>
+		</div>
+		<div class="notif-body clearfix">
+			{% for media in medias %}
+				<div class="thumb img-thumbnail ">
+					<img  src="{{media.link|imagine_filter('media_thumb')}}">
+					<div>{{media.titre}}</div>
+					<div class="select"> اظافة الصورة  للمقال <i class="fa fa-plus" aria-hidden="true"></i></div>
+				</div>
+			{% else %}
+			لا توجد لذيك اي صورة حاليا اظغطي على زر "اظاف صورة" اعلاه لاظافة صور جديدة
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

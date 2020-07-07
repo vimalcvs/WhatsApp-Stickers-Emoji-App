@@ -1,0 +1,15 @@
+media_index:
+    path:     /medias/
+    defaults: { _controller: MediaBundle:Media:index }
+media_add:
+    path:     /medias/add
+    defaults: { _controller: MediaBundle:Media:add }
+media_delete:
+    path:     /medias/delete/{id}
+    defaults: { _controller: MediaBundle:Media:delete }
+api_media_delete:
+    path:     /api/medias/delete/{id}/{token}/
+    defaults: { _controller: MediaBundle:Media:api_delete }
+media_api_upload:
+    path:     /api/medias/upload/{token}/
+    defaults: { _controller: MediaBundle:Media:api_upload }

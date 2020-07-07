@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/circle_image_view_profile_nav_header"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/profile" />
+    <TextView
+
+        android:id="@+id/text_view_name_nave_header"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/please_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+</LinearLayout>

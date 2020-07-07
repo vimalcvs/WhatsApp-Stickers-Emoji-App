@@ -1,0 +1,100 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-12" style=" height: auto; text-align:center;background-image:url({{asset(user.image)}});background-position: center;background-size: 100%;text-align: center;">
+		    <img src="{{asset(user.image)}}" alt="" style="border-radius:300px;margin:10px;height:100px;width:100px;border: 5px solid rgb(255, 247, 247);">
+		    <h3 style=" color: white; font-weight: bold">{{user.name}}</h3>
+		</div>
+        <div  class="col-md-12" style="border:1px solid #ccc;height:70px;background:white">
+             <div class="row">
+                <div  class="col-md-2" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_edit",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">Edit infos</a>
+                </div>
+                <div  class="col-md-2" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followings",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.users|length}} Following </a>
+                </div>
+                <div  class="col-md-2" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_followers",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.followers|length}} Followers </a>
+                </div>
+                <div  class="col-md-2" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_comments",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.comments|length}} Comments </a>
+                </div>
+                <div  class="col-md-2" style="border-right:1px solid #ccc;height:70px;background:white">
+                <a href="{{path("user_user_ratings",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.ratings|length}} Ratings </a>
+                </div>
+                <div  class="col-md-2" style="height:70px;background:white">
+                <a href="{{path("user_user_wallpapers",{"id":user.id})}}" style="color:black;font-size:20px;line-height: 70px;font-weight: bold;">{{user.wallpapers|length}} Wallpapers </a>
+                </div>
+             </div>       
+        </div>
+        <div  class="col-md-12" >
+        	<br>
+        	<br>
+ 			   
+			<div class="row">
+                {% for comment in pagination %}
+				<div class="col-md-6">
+                    <ul class="timeline timeline-simple">
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge danger">
+                                <img src="{{comment.user.image}}"  class="img-profile">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                               		<a href="{{path("user_user_edit",{id:comment.user.id})}}" title="">
+                                    	<span class="label label-danger">{{comment.user.name}}</span>
+                                	</a>
+                                	<span class="pull-right" >
+				                        <a href="{{path("app_comment_delete",{id:comment.id,"comment":"true"})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Delete">
+				                            <i class="material-icons" style="color:red">delete</i>
+				                        </a>
+				                        {% if comment.enabled %}
+					                        <a href="{{path("app_comment_hide",{id:comment.id})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Hide">
+					                             <i class="material-icons">visibility_off</i>
+					                        </a>
+				                        {% else %}				                        
+					                        <a href="{{path("app_comment_hide",{id:comment.id})}}"  rel="tooltip" data-placement="bottom" title="" data-original-title="Show">
+					                             <i class="material-icons">remove_red_eye</i>
+					                        </a>
+				                        {% endif %}
+				                    </span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>{{comment.contentclear}}</p>
+                                </div>
+                                <hr>
+                                <a href="{{path("app_wallpaper_view",{id:comment.wallpaper.id})}}" title="">
+                                <small class="label label-rose">
+                                     <span>{{comment.wallpaper.title}}</span>
+                                </small>
+                                </a>
+                                <small class="pull-right label label-rose">
+                                     <span>{{comment.created|ago}}</span>
+                                </small>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+                {% else %}
+				<div class="card">
+					<div class="card-content">
+						<br>
+						<br>
+						<center><img src="{{asset("img/bg_empty.png")}}"  style="width: auto !important;" =""></center>
+						<br>
+						<br>
+					</div>
+				</div>
+				{% endfor %}
+	    		</div>
+			<div class=" pull-right">
+				{{ knp_pagination_render(pagination) }}
+			</div>
+	        </div>
+    	</div>
+    </div>
+</div>
+
+{% endblock%}

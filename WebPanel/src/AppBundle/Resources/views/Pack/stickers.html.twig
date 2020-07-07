@@ -1,0 +1,146 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% block body%}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="{{path("app_pack_index")}}" class="btn btn-rose btn-lg pull-right add-button col-md-12" title=""><i class="material-icons" style="font-size: 30px;">arrow_back</i> PACK LIST </a>
+				</div>
+				<div class="col-md-4">
+					<a class="btn btn btn-lg btn-yellow col-md-12"><i class="material-icons" style="font-size: 30px;">inbox</i> {{count}} Sticker(s)</a>
+				</div>
+				<div class="col-md-4">
+					<a href="{{path("app_pack_stickers",{"id":app.request.get("id")})}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">refresh</i> Refresh</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header card-header-icon" data-background-color="rose">
+							<i class="material-icons">inbox</i>
+						</div>
+						<div class="card-content">
+							<h4 class="card-title">{{pack.name}} stickers  <span class="label label-danger label-lg pull-right" style="font-size:14px;">{{pack.sizes}}</span></h4>
+							<br>
+							<br>
+							<div>
+								<div class="pack-image" style="    margin-top: 12px;">
+									<div class="path-image-img"><img src="{{asset(pack.image.link)}}" class="thumbnail" id="img-preview"></div>
+								</div>
+								<div class="form-right-view">
+									<div class="form-group label-floating ">
+										<label class="control-label">Pack name</label>
+										<input name="name" class="form-control" value="{{pack.name}}" readonly="true">
+									</div>
+									<div class="form-group label-floating ">
+										<label class="control-label">Pack publisher</label>
+										<input name="publisher" class="form-control" value="{{pack.publisher}}" readonly="true">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+									<div class="form-group label-floating ">
+										<label class="control-label">Publisher E-mail</label>
+										<input name="name" class="form-control" value="{{pack.publisheremail}}" readonly="true">
+									</div>
+									<div class="form-group label-floating ">
+										<label class="control-label">Publisher Website</label>
+										<input name="publisher" class="form-control" value="{{pack.publisherwebsite}}" readonly="true">
+									</div>
+							</div>
+							<div class="col-md-6">
+									<div class="form-group label-floating ">
+										<label class="control-label">Website privacy policy</label>
+										<input name="name" class="form-control" value="{{pack.privacypolicywebsite}}" readonly="true">
+									</div>
+									<div class="form-group label-floating ">
+										<label class="control-label">Website license agreement</label>
+										<input name="publisher" class="form-control" value="{{pack.licenseagreementwebsite}}" readonly="true">
+									</div>
+							</div>
+							<div class="col-md-6">
+								<br>
+								{% if pack.enabled %}
+									<i class="material-icons" style="color:green;float:left">check_circle</i> <span class="check-label">Enabled</span>
+								{% else %}
+									<i class="material-icons" style="color:red;float:left">cancel</i> <span class="check-label">Disabled</span>
+								{% endif %}
+							</div>
+							<div class="col-md-6">
+								<br>
+								{% if pack.premium %}
+									<i class="material-icons" style="color:green;float:left">check_circle</i> <span class="check-label">Premium Pack</span>
+								{% else %}
+									<i class="material-icons" style="color:red;float:left">cancel</i> <span class="check-label">Free Pack</span>
+								{% endif %}
+							</div>
+							<div class="col-md-6">
+								<h4>Categories : </h4>
+								{% for category in pack.categories %}
+									<span class="label label-rose " style="margin:5px;"> <b> {{category.title}} </b></span>  
+								{% endfor %}
+								<br>
+								<br>
+								<br>
+							</div>
+							<div class="col-md-6" >
+								<h4>Tags : </h4>
+								{% for tag in pack.tagslist %}
+									<span class="label label-rose " style="margin:5px;"> <b> {{tag.name}} </b></span>  
+								{% endfor %}
+								<br>
+								<br>
+								<br>
+							</div>	
+							<hr>
+							<div class="card-footer">
+								<div class="wallpaper-logo" >
+									{% if pack.user.image == "" %}
+										{{pack.user.name}}
+									{% else %}
+										<img src="{{pack.user.image}}" class="avatar-img" alt=""> 
+									{% endif %}
+									<span style="    line-height: 26px;font-size: 16px;">{{pack.user.name}}</span>
+									<span style="    line-height: 26px;font-size: 16px;">|</span>
+									<span style="    line-height: 26px;font-size: 16px;">{{pack.created|ago}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a href="{{path("app_sticker_add",{"id":app.request.get("id")})}}" class="btn  btn-lg btn-warning col-md-12"><i class="material-icons" style="font-size: 30px;">add</i> NEW STICKER</a>
+				</div>
+			</div>
+			<div class="row"  id="categoryProductContainer">
+				{% for sticker in stickers %}
+					<div class="col-md-3 span2 pcon prodcont actioninside new">
+						<div class="card">
+							<div class="card-content">
+								<h3></h3>
+								<img src="{{asset(sticker.media.link)}}" style="width:100%; height:auto;    border-radius: 5px;border:1px solid #ccc;padding:10px" >
+								<br>
+							</div>
+							<div class="card-footer" style="    text-align: center;margin:0px">
+								<a href="{{path("app_sticker_edit",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-primary btn-xs btn-round" data-original-title="Edit">
+									<i class="material-icons">edit</i>
+								</a>
+								<a href="{{path("app_sticker_delete",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-danger btn-xs btn-round" data-original-title="Delete">
+									<i class="material-icons">delete</i>
+								</a>
+								<a href="{{path("app_sticker_up",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-info btn-xs btn-round" data-original-title="Up">
+									<i class="material-icons">keyboard_arrow_up</i>
+								</a>
+								<a href="{{path("app_sticker_down",{"id":sticker.id})}}" rel="tooltip" data-placement="bottom" class=" btn btn-info btn-xs btn-round" data-original-title="Down">
+									<i class="material-icons">keyboard_arrow_down</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% endblock%}

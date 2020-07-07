@@ -1,0 +1,619 @@
+@media (min-width: 992px){
+    .typo-line{
+        padding-left: 140px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .typo-line .category{
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0px;
+        position: absolute;
+    }
+}
+.player-control{
+  cursor: pointer;
+}
+.panel-body {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.panel-title {
+    position: absolute;
+    background: white;
+    margin-top: -30px;
+    padding-left: 10px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.tab-moivie {
+    position: absolute;
+}
+.label-lang{
+    height: 70px;
+    display: inline-block;
+    line-height: 70px;
+    font-size: 20pt;
+    font-weight: bold;
+    padding-left: 10px;
+    background: #0000007a;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    }
+#map{
+    position:relative;
+    width:100%;
+    height: calc(100% - 60px);
+    margin-top: 70px;
+}
+
+.places-buttons .btn{
+    margin-bottom: 30px
+}
+
+.space-70{
+    height: 70px;
+    display: block;
+}
+
+.sidebar .nav > li.active-pro{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
+.tim-row{
+    margin-bottom: 20px;
+}
+
+.tim-typo{
+    padding-left: 25%;
+    margin-bottom: 40px;
+    position: relative;
+}
+.tim-typo .tim-note{
+    bottom: 10px;
+    color: #c0c1c2;
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    left: 0;
+    margin-left: 20px;
+    position: absolute;
+    width: 260px;
+}
+.tim-row{
+    padding-top: 50px;
+}
+.tim-row h3{
+    margin-top: 0;
+}
+.fileinput-new{
+    max-width: 100% !important;
+}
+.img-selector{
+    opacity: 0px !important;
+    display: none;
+}
+.avatar{
+    position: relative;
+}
+.avatar .badge-avatar{
+        height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.pagination span.page a,
+.pagination span.next a,
+.pagination span.last a,
+.pagination span.first a,
+.pagination span.previous a{
+    border-radius: 50px;
+    color: white; 
+    margin: 5px;
+    cursor: pointer;
+}
+.pagination span.page a,
+.pagination span.next a,
+.pagination span.last a,
+.pagination span.first a,
+.pagination span.previous a{
+    color: white;
+}
+
+.pagination span.current{
+  border: 0;
+  border-radius: 30px !important;
+  transition: all .3s;
+  padding: 0px 11px;
+  margin: 0 3px;
+  min-width: 30px;
+  height: 30px;
+  padding-left:  20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 30px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: transparent;
+  border:1px solid #ccc;
+  }
+.pagination{
+    display: block;
+}
+.wallpaper-title{
+    border-radius: 0px 0px 6px 6px;
+    padding: 10px;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    height: 55px;
+}
+.price{
+  position: absolute;
+  right: 10px;
+}
+.wallpaper-logo{
+    border-radius: 0px 0px 6px 6px;
+    padding: 0px;
+    color: black;
+    font-weight:normal;
+    text-align: left;
+}
+.wallpaper-logo>span{
+  padding-left: 5px;
+ display: inline-block;  
+ line-height: 13px; 
+ padding-top: 3px;
+ font-size:11px;
+}
+.avatar-img{
+  float: left;
+      height: 30px !important;
+    width: 30px !important;
+    border-radius: 50px !important;
+}
+.color{
+
+  border: 1px solid #ccc 
+  display: inline-table;
+  height: 11px;
+  width: 30px;
+}
+.timeline > li > .timeline-badge{
+      line-height: 48px;
+}
+.timeline > li > .timeline-badge img{
+    height: 100%;
+    width: 100%;
+}
+.timeline.timeline-simple {
+    margin-top: 00px;
+    padding: 0 0 00px;
+}
+.timeline > li {
+    margin-bottom: 0px;
+    position: relative;
+}
+.timeline.timeline-simple:before {
+    left: 5%;
+    background-color: none;
+    width:0px;
+}
+.check-label{
+      height: 25px;
+    display: inline-table;
+    line-height: 25px;
+    margin-left: 10px;
+}
+.color{
+  height: 20px;
+    background-color: #C40E38;
+    width: 20px;
+    display: inline-block;
+    border-radius: 61px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.img-profile{
+    border-radius: 50px;
+}
+
+ul.tags{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+ul.tags label{
+  display: none !important;
+}
+ul.tags >li{
+  margin-top: 5px;
+}
+ul.tags >li>a.delete-item{
+    height: 40px;
+    background: #e4306f;
+    display: inline-block;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+ul.tags >li>div,ul.tags >li>div>div{
+  display: inline-block;
+  width: calc(50% - 20px);
+  float: left;
+}
+ul.tags >li>div[id^="question_tags"]{
+  display: inline-block;
+  width: calc(100% - 40px) !important;
+  float: left;
+}
+ul.tags >li>div[id^="question_tags"]>div{
+  display: inline-block;
+  width: calc(50%)  !important;
+  float: left;
+}
+ul.tags >li>div>input,ul.tags >li>div>div>input{
+    width: 100%;
+    height: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+ul.tags >li>div>input[type="number"],ul.tags >li>div>div>input[type="number"]{
+    border-radius: 0px !important;
+    border-left: none;
+}
+ul.tags >li:last-child a.delete-item{
+  display: none;
+}
+ul.tags a.add_tag_link{
+    height: 40px;
+    background: #e4306f;
+    display: inline-block;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}
+.posts{
+  padding: 5px;
+}
+#audioplayer{
+  display: none;
+}
+.card-product{
+    margin-top: 0px;
+}
+.card-color-1{
+  background: #40A8B4;
+}
+.card-color-2{
+  background: #406EB4;
+}
+.card-color-3{
+  background: #4C40B4;
+}
+.card-color-4{
+  background: #8640B4;
+}
+.card-color-5{
+  background: #B440A8;
+}
+.card-color-6{
+  background: #B4406E;
+}
+.label-reaction{
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+width: 45px;
+height: 20px;
+font-size: 8pt;
+background:white;
+}
+.reaction>span{
+  height: 50px;
+  width: 50px;
+  position: relative;
+  display: inline-block;
+}
+.reaction{
+  position: relative;
+  box-shadow: 0px 0px 10px 5px #ccc;
+  border-radius: 100px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  background: white;
+  border:1px solid #CCC;
+}
+.reaction img{
+  height: 50px;
+  width: 50px;
+}
+.image-title{
+   font-size: 20px; font-weight: bold; margin: 10px; text-align: center
+}
+.card .card-actions {
+    position: absolute;
+    z-index: 1;
+    top: -241px;
+    left: 6px;
+    text-align: center;
+    background: rgba(82, 56, 56, 0);
+}
+.btn{
+  border-radius: 0px !important;
+  background-color: black !important;
+      box-shadow: none !important;
+      color: white !important;
+}
+.tooltip-inner{
+  color: white !important;
+    background: black !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+.sidebar[data-active-color="blue"] li.active > a, .off-canvas-sidebar[data-active-color="blue"] li.active > a{
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  background-color: black;
+}
+.nav>li>a {
+    padding: 7px 7px !important;
+    border-bottom: 1px solid #ccc;
+}
+.sidebar, .off-canvas-sidebar{
+  box-shadow: none !important;
+      border-right: 1px solid #ccc !important;
+}
+.form-group.label-static label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-floating label.control-label{
+  position: relative;
+}
+.form-control{  
+    padding: 5px;
+    background: #e7e7e7 !important;
+    border-bottom: 0px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 0px !important;
+}
+.form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label {
+     top: -7px !important; 
+    left: 0px !important;
+    font-size: 14px !important;
+    line-height: 1.42857 !important;
+}
+.form-group.has-error .form-control {
+    background: white;
+    border-color: red !important;
+}
+.form-group.is-focused .form-control {
+    background: white !important;
+}
+.form-control, .form-group .form-control{
+  background: white;
+}
+.card .card-header.card-header-icon {
+    float: left !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    background: black !important;
+        margin-right: 14px !important;
+}
+.label.label-danger,.label.label-rose{
+  background-color: black !important;
+}
+.timeline > li > .timeline-panel {
+    width: 45%;
+    float: left;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14) !important;
+    border-radius: 0px !important;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+}
+.card{
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+.card-header{
+      border-radius: 0px !important;
+    box-shadow: none !important;
+    background: black !important;
+}
+.card [data-background-color]{
+  margin: 0px !important
+}
+.card-stats .card-content{
+      padding-bottom: 4px;
+}
+.card-stats .card-content h3{
+  margin-top: 3px;
+}
+.card-stats .card-footer{
+  padding: 0px;
+  margin: 0px;
+}
+.card-stats .card-footer .stats{
+    background: black;
+    color: white;
+    float: right;
+    font-size: 10pt;
+    padding: 5px;
+}
+.card-stats .card-footer .stats a{
+  color: white
+}
+.fileinput .thumbnail{
+  box-shadow: none;
+}
+.sidebar .logo, .off-canvas-sidebar .logo{
+  text-align: center;
+}
+.wrapper{
+  overflow: hidden;
+}
+.form-group{
+  padding-bottom: 5px !important;
+  margin: 10px 0 0 0 !important;
+}
+.pack-files{
+  position: relative;
+  height: 380px;
+}
+.pack-image{
+  height: 160px;
+  width: 150px;
+
+
+}
+.pack-image .path-image-img{
+    height: 150px;
+  width: 150px;
+  border: 2px dashed rgba(0,0,0,0.15);
+  border-radius:5px
+}
+.pack-image .path-image-img img{
+  height: 100%;
+  width: 100%;
+}
+.pack-image button,
+.pack-stickers button{
+  width: 100%;
+  margin-top :5px;
+  padding: 5px;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid #CCC ;
+}
+.pack-stickers .pack-stickers-files{
+  height: 300px;
+  width: 100%;
+  overflow: scroll;
+}
+.pack-stickers{
+  top: 0px;
+  margin-left:160px;
+  position: absolute;
+  height:350px;
+  width: calc( 100% -  160px);
+  background: white;
+  border: 2px dashed rgba(0,0,0,0.15);
+  border-radius:5px;
+  padding:5px;
+}
+.validate-input{
+  color:red;
+}
+.is-input-file{
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+  display: none;
+}
+.pack-item{
+  position: relative;
+  height: 120px;
+}
+.pack-item-image{
+  position: absolute;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 130px;
+  width: 120px;
+}
+.pack-item-image img{
+  height: 120px;
+  width: 120px;
+}
+.pack-item-sticker{
+   border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin: 2px;
+}
+.pack-item-sticker img{
+  height: 50px;
+  width: 50px;
+}
+.pack-item-title{
+    padding:5px 0px 0px 20px;
+    top: 0px;
+    position: absolute;
+    height: 30px;
+    margin-left: 120px;
+    width: calc(100% - 120px);
+    font-size: 14pt;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.pack-body{
+      padding:5px 0px 0px 20px;
+    top: 30px;
+    position: absolute;
+    height: 112px;
+    margin-left: 120px;
+    width: calc(100% - 100px);
+    overflow: hidden;
+}
+.form-right-view{
+    position: absolute;
+    top: 95px;
+    width: calc(100% - 200px);
+    margin-left: 160px;
+    height: 230px;
+}
+.form-right{
+    position: absolute;
+    top: 79px;
+    width: calc(100% - 200px);
+    margin-left: 160px;
+    height: 230px;
+}
+.btn-tab-movie {
+    background-color: white !important;
+    border: 2px solid black !important;
+    color: black !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 20px;
+}
+.btn-tab-movie-active {
+    background-color: black !important;
+    border: 2px solid black !important;
+    color: white !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 20px;
+}

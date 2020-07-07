@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>How To Admin Panel</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Bootstrap Material Design -->
+  <link href="{{asset('css/bootstrap-material-design.css')}}" rel="stylesheet">
+  <link href="{{asset('css/ripples.min.css')}}" rel="stylesheet">
+
+  <!-- Dropdown.js -->
+  <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
+  <!-- Page style -->
+  <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="alert alert-{{ type }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+    </body>
+</html>

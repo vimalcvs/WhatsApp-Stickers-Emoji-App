@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#dddee3</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDarkMenu">#FFFFFF</color>
+    <color name="colorPrimarybg">#FFFFFF</color>
+
+    <color name="colorAccent">#25D366</color>
+
+    <color name="menuBackgroun">#25D366</color>
+    <color name="menuSelector">#f7214f</color>
+    <color name="white">#fff</color>
+
+
+    <color name="primary_text">#212121</color>
+    <color name="white_transparent_done">#beffffff</color>
+
+    <color name="light_white">#d4d4d4</color>
+    <color name="black">#000000</color>
+    <color name="gray_color">#ccc</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="primary_text_light">#606060</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_gray">#9c9c9c</color>
+
+    <color name="blue">#303f9f</color>
+    <color name="green">#388e3c</color>
+    <color name="red">#d32f2f</color>
+    <color name="pink">#c2185b</color>
+    <color name="pruple">#7b1fa2</color>
+    <color name="yellow">#ffa000</color>
+    <color name="orange">#ff6d00</color>
+    <color name="blue_bg_light">#e8eaf6</color>
+    <color name="red_bg_light">#ffebee</color>
+    <color name="yellow_bg_light">#fff8e1</color>
+    <color name="pink_bg_light">#fce4ec</color>
+    <color name="orange_bg_light">#fff3e0</color>
+    <color name="pruple_bg_light">#f3e5f5</color>
+    <color name="green_bg_light">#e8f5e9</color>
+
+    <color name="materialcolorpicker__white">#ffffff</color>
+    <color name="materialcolorpicker__red">#f44336</color>
+    <color name="materialcolorpicker__green">#4caf50</color>
+    <color name="materialcolorpicker__blue">#2196f3</color>
+    <color name="materialcolorpicker__grey">#b3b3b3</color>
+    <color name="materialcolorpicker__lightgrey">#d9d9d9</color>
+    <color name="materialcolorpicker__dribble">#ea4c89</color>
+    <color name="materialcolorpicker__dribbledark">#c32361</color>
+    <color name="materialcolorpicker__black">#000000</color>
+    <color name="materialcolorpicker__dialogcolor">#009688</color>
+    <color name="hint_foreground_material_light">#00000000</color>
+    <color name="hint_foreground_material_dark">#00000000</color>
+    <array name="dot_colors">
+        <item>#03A9F4</item>
+        <item>#E65100</item>
+        <item>#FFBB00</item>
+    </array>
+</resources>

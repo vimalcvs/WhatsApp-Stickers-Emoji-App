@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/colorPrimarybg"
+android:fitsSystemWindows="true"
+tools:context=".ui.HomeActivity">
+
+<com.google.android.material.appbar.AppBarLayout
+    app:elevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:elevation="2dp"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                style="@style/ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+
+            <com.miguelcatalan.materialsearchview.MaterialSearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</com.google.android.material.appbar.AppBarLayout>
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/vp_horizontal_ntb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/top_navigation_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:bnc_mode="inside"
+        app:hideOnScroll="true"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:layout_gravity="bottom"
+        >
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_icon="@drawable/ic_home_2"
+            app:bt_iconHeight="20dp"
+            app:bt_iconWidth="20dp"
+            app:bt_colorActive="@color/red"
+            app:bt_colorInactive="@color/primary_text"
+            app:bt_shape="@drawable/bg_background_red"
+            app:bt_title="Latest" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_iconHeight="20dp"
+            app:bt_iconWidth="20dp"
+            app:bt_colorInactive="@color/primary_text"
+            app:bt_colorActive="@color/yellow"
+            app:bt_shape="@drawable/bg_background_yellow"
+            app:bt_icon="@drawable/ic_zap"
+            app:bt_title="Popular" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_profile_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_iconHeight="20dp"
+            app:bt_iconWidth="20dp"
+            app:bt_colorInactive="@color/primary_text"
+            app:bt_colorActive="@color/green"
+            app:bt_shape="@drawable/bg_background_green"
+            app:bt_icon="@drawable/ic_subscriptions_my"
+            app:bt_title="Subscriptons" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_item_profileist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_iconHeight="20dp"
+            app:bt_iconWidth="20dp"
+            app:bt_colorInactive="@color/primary_text"
+            app:bt_colorActive="@color/pruple"
+            app:bt_shape="@drawable/bg_background_pruple"
+            app:bt_icon="@drawable/ic_grid"
+            app:bt_title="Categories" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/l_ite_profi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_iconHeight="20dp"
+            app:bt_iconWidth="20dp"
+            app:bt_colorInactive="@color/primary_text"
+            app:bt_colorActive="@color/pink"
+            app:bt_shape="@drawable/bg_background_pink"
+            app:bt_icon="@drawable/ic_favorite_border"
+            app:bt_title="Favorites" />
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="10dp"
+        app:elevation="1dp"
+        app:borderWidth="0dp"
+        app:fabCustomSize="50dp"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_add" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
