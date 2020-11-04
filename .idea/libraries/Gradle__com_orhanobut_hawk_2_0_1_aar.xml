@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.orhanobut:hawk:2.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf1c39b93c6235f72cac9607e9cda56c/jetified-hawk-2.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf1c39b93c6235f72cac9607e9cda56c/jetified-hawk-2.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a644b5aeb367d4cb564be23edd011115/jetified-hawk-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a644b5aeb367d4cb564be23edd011115/jetified-hawk-2.0.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.orhanobut/hawk/2.0.1/46f8f5a433cdfeac8967bbffbddc9a80df73538c/hawk-2.0.1-javadoc.jar!/" />

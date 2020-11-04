@@ -10,11 +10,18 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
 
+
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
     </style>
+
     <style name="popwin_anim_style">
         <item name="android:windowEnterAnimation">@anim/menushow</item>
         <item name="android:windowExitAnimation">@anim/menuhide</item>
     </style>
+
     <style name="textview_login" parent="AppTheme">
         <item name="android:textColorHint">@color/primary_text</item>
         <item name="android:textSize">16sp</item>

@@ -245,7 +245,7 @@
                     android:text="Please Type the verification code sended to you"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-                <com.vimalcvs.stickers_app.ui.views.OtpEditText
+                <com.virmana.stickers_app.ui.views.OtpEditText
                     android:id="@+id/otp_edit_text_login_activity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

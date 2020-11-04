@@ -30,11 +30,10 @@
                 android:layout_height="1dp"/>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
-
     <WebView
         android:id="@+id/web_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/appBarLayout"/>
+        android:layout_below="@+id/appBarLayout"></WebView>
 
 </RelativeLayout>

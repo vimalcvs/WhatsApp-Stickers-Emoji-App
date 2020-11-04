@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.vimalcvs.stickers_app.ui.DrawView
+            <com.virmana.stickers_app.ui.DrawView
                 android:id="@+id/drawView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />

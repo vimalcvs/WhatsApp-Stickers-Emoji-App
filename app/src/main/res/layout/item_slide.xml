@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="230dp"
     tools:context=".ui.HomeActivity">
-    <com.vimalcvs.stickers_app.ui.views.ClickableViewPager
+    <com.virmana.stickers_app.ui.views.ClickableViewPager
         android:gravity="center"
         android:paddingBottom="3dp"
         android:paddingLeft="8dp"
@@ -14,7 +14,7 @@
         android:id="@+id/view_pager_slide"
         android:layout_width="match_parent"
         android:layout_height="230dp">
-    </com.vimalcvs.stickers_app.ui.views.ClickableViewPager>
+    </com.virmana.stickers_app.ui.views.ClickableViewPager>
     <com.github.vivchar.viewpagerindicator.ViewPagerIndicator
         android:background="@drawable/rounded_rectangle"
         android:layout_alignParentBottom="true"

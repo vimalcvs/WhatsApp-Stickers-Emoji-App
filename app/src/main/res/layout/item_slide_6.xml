@@ -26,8 +26,7 @@
                     android:textColor="@color/primary_text"
                     android:text="@string/title_slide_6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal" />
+                    android:layout_height="wrap_content" />
                 <ImageView
                     android:layout_centerVertical="true"
                     android:src="@drawable/slide_7"
@@ -42,8 +41,7 @@
                     android:textColor="@color/primary_text_light"
                     android:text="@string/description_slide_6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal" />
+                    android:layout_height="wrap_content" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

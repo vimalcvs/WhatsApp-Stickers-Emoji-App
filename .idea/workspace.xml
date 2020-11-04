@@ -11,13 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d8e153a-a673-4db8-8ab8-106de4213d1f" name="Default Changelist" comment="" />
+    <list default="true" id="e7eace42-14ec-454d-bcb8-12e0ac72ee2f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="UUQDU19117000248" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -26,22 +26,18 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
-  <component name="ProjectId" id="1eMRhxusGJZ0VUYStBC1nKoh7nt" />
+  <component name="ProjectId" id="1jpAGAuv5EkXxvxL30IirjteKJU" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="UUQDU19117000248" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-11-04T13:59:07.963Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -132,18 +128,41 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d8e153a-a673-4db8-8ab8-106de4213d1f" name="Default Changelist" comment="" />
-      <created>1594129597355</created>
+      <changelist id="e7eace42-14ec-454d-bcb8-12e0ac72ee2f" name="Default Changelist" comment="" />
+      <created>1604490560706</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594129597355</updated>
+      <updated>1604490560706</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="365" y="129" width="744" height="606" key="find.popup" timestamp="1594133440009">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state x="542" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1604492715375">
+      <screen x="0" y="0" width="1473" height="864" />
     </state>
-    <state x="365" y="129" width="744" height="606" key="find.popup/0.0.1474.864@0.0.1474.864" timestamp="1594133440009" />
+    <state x="542" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1473.864@0.0.1473.864" timestamp="1604492715375" />
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604502065067">
+      <screen x="0" y="0" width="1473" height="864" />
+    </state>
+    <state x="467" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1473.864@0.0.1473.864" timestamp="1604502065067" />
+    <state x="517" y="187" key="FileChooserDialogImpl" timestamp="1604501936502">
+      <screen x="0" y="0" width="1473" height="864" />
+    </state>
+    <state x="517" y="187" key="FileChooserDialogImpl/0.0.1473.864@0.0.1473.864" timestamp="1604501936502" />
+    <state x="367" y="129" width="738" height="606" key="find.popup" timestamp="1604500611307">
+      <screen x="0" y="0" width="1473" height="864" />
+    </state>
+    <state x="367" y="129" width="738" height="606" key="find.popup/0.0.1473.864@0.0.1473.864" timestamp="1604500611307" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/virmana/stickers_app/ui/HomeActivity.java</url>
+          <line>679</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

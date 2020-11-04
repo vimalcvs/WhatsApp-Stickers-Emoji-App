@@ -54,7 +54,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:690266354741:android:e7140ddbb1cd8675",
         "android_client_info": {
-          "package_name": "com.vimalcvs.ringtone_app"
+          "package_name": "com.virmana.ringtone_app"
         }
       },
       "oauth_client": [
@@ -62,7 +62,7 @@
           "client_id": "690266354741-2utio6a1p8ln1cojh8nh9iuqns9vesqh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.vimalcvs.ringtone_app",
+            "package_name": "com.virmana.ringtone_app",
             "certificate_hash": "0f07403727f1c7e897ddf43fbbedecb06b59acd6"
           }
         },
@@ -70,7 +70,7 @@
           "client_id": "690266354741-lpcs70icfaat2pdgu4dgekf5k91upug2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.vimalcvs.ringtone_app",
+            "package_name": "com.virmana.ringtone_app",
             "certificate_hash": "976f75958dd7b0550a420e522d849c6084dafddc"
           }
         },
@@ -78,7 +78,7 @@
           "client_id": "690266354741-de2c0t2qqv2pjf3geuqbh8afq179pami.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.vimalcvs.ringtone_app",
+            "package_name": "com.virmana.ringtone_app",
             "certificate_hash": "6faf28510e347c3b61e9d0deb7b43a95d89e1f7b"
           }
         },
@@ -114,7 +114,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:690266354741:android:6d6d9163bbfcbdec",
         "android_client_info": {
-          "package_name": "com.vimalcvs.status_video"
+          "package_name": "com.virmana.status_video"
         }
       },
       "oauth_client": [
@@ -145,7 +145,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:690266354741:android:20e15d13aad1a001",
         "android_client_info": {
-          "package_name": "com.vimalcvs.stickers_app"
+          "package_name": "com.virmana.stickers_app"
         }
       },
       "oauth_client": [

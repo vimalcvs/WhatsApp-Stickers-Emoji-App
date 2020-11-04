@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.vimalcvs:Material-Smart-Rating:1.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7a4e5642b3acfd0142a9a8eae6aee153/jetified-Material-Smart-Rating-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7a4e5642b3acfd0142a9a8eae6aee153/jetified-Material-Smart-Rating-1.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vimalcvs/Material-Smart-Rating/1.0.3/31ebd6d2bbe203478dbc9eed88d3d0d210f96082/Material-Smart-Rating-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

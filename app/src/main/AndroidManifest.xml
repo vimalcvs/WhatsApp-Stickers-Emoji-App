@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.vimalcvs.stickers_app">
+    package="com.virmana.stickers_app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -67,7 +67,7 @@
         <provider
             tools:replace="android:authorities"
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.vimalcvs.stickers_app.fileprovider"
+            android:authorities="com.virmana.stickers_app.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -85,7 +85,7 @@
         <activity android:name=".ui.StickerDetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vimalcvs.stickers_app.MainActivity" />
+                android:value="com.virmana.stickers_app.MainActivity" />
         </activity>
         <activity
             android:name=".ui.HomeActivity"
@@ -104,11 +104,13 @@
             android:theme="@style/Theme.UserDialog" />
         <activity android:name=".ui.EditActivity"
             android:theme="@style/Theme.UserDialog"/>
+
         <activity android:name=".ui.SearchActivity" />
         <activity android:name=".ui.SettingsActivity" />
         <activity android:name=".ui.PolicyActivity" />
         <activity android:name=".ui.SupportActivity" />
         <activity android:name=".ui.LoadActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -123,6 +125,7 @@
                 <data android:host="@string/panel_url" />
             </intent-filter>
         </activity>
+
         <activity android:name=".ui.InfosActivity" />
         <activity android:name=".ui.SlideActivity" />
         <activity android:name=".ui.UploadActivity"></activity>
