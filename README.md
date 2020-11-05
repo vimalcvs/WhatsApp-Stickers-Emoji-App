@@ -1,4 +1,6 @@
 # WhatsappStickers-Android
+[![](https://jitpack.io/v/vimalcvs/Day-Night-Switch.svg)](https://jitpack.io/#vimalcvs/WhatsApp-Stickers-Emoji-App)
+
 Check out the new Ultimate Whatsapp Stickers and Emoji - Admin Panel Application...😉😀😁😎
 
 <a href="https://whatsapp.virmana.com/" rel="nofollow"><img src="https://camo.envatousercontent.com/def9cbfe42796b8ac77b424c6532b601d9d7208f/687474703a2f2f7669726d616e612e636f6d2f696d616765732f61646d696e70616e656c2e706e67" alt="Ultimate Whatsapp Stickers and Emoji - Admin Panel - 1" width="250" height="39"/></a>
